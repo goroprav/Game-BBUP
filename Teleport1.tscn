@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://dycvt8b3tmuqb"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_ylnnx"]
+a = Vector2(279, -275)
+b = Vector2(-316, 315)
+
+[node name="Teleport" type="Area2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("SegmentShape2D_ylnnx")
