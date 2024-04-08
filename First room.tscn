@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://dcar487npruux"]
+[gd_scene load_steps=31 format=3 uid="uid://dcar487npruux"]
 
 [ext_resource type="Texture2D" uid="uid://coe1adlr8jo1x" path="res://Sprite/Textures/gender.png" id="1_su813"]
 [ext_resource type="Texture2D" uid="uid://buhechghhl04k" path="res://Sprite/Textures/gender black.png" id="2_am3a2"]
@@ -51,29 +51,15 @@ texture = ExtResource("4_p5wm4")
 sources/0 = SubResource("TileSetAtlasSource_47ptr")
 sources/1 = SubResource("TileSetAtlasSource_xs3j1")
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_lo36h"]
-load_path = "res://.godot/imported/wall textyre 1.png-195132a0221ffcae15bedaeddc9c94f9.ctex"
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0ihv6"]
-texture = SubResource("CompressedTexture2D_lo36h")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_l7wa2"]
+texture = ExtResource("3_o1pcb")
 0:0/0 = 0
 1:0/0 = 0
 0:1/0 = 0
 1:1/0 = 0
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_taoce"]
-load_path = "res://.godot/imported/wall textyre 2.png-0932bd2e6fd9dffc83042604df02515d.ctex"
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_brptu"]
-texture = SubResource("CompressedTexture2D_taoce")
-0:0/0 = 0
-1:0/0 = 0
-0:1/0 = 0
-1:1/0 = 0
-
-[sub_resource type="TileSet" id="TileSet_127ic"]
-sources/0 = SubResource("TileSetAtlasSource_0ihv6")
-sources/1 = SubResource("TileSetAtlasSource_brptu")
+[sub_resource type="TileSet" id="TileSet_afste"]
+sources/0 = SubResource("TileSetAtlasSource_l7wa2")
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_88ob8"]
 atlas = ExtResource("5_ajlb1")
@@ -171,7 +157,7 @@ layer_0/tile_data = PackedInt32Array(-327674, 65537, 0, -393210, 65537, 1, -2621
 [node name="Stena glavnaya" type="TileMap" parent="."]
 position = Vector2(821, 129)
 scale = Vector2(7, 7)
-tile_set = SubResource("TileSet_127ic")
+tile_set = SubResource("TileSet_afste")
 format = 2
 layer_0/tile_data = PackedInt32Array(-4, 0, 1, -65540, 0, 1, -131076, 65536, 1, -131075, 65536, 1, -65539, 65536, 0, -3, 0, 0, 65533, 0, 1, 65532, 0, 1, 65534, 0, 1, 65535, 0, 1, 0, 0, 1, 1, 0, 1, 2, 65536, 0, -65535, 0, 0, -65536, 0, 1, -1, 0, 1, -2, 65536, 0, -65538, 0, 1, -65537, 65536, 0, -131072, 0, 1, -131071, 0, 1, -196607, 0, 1, -196608, 0, 0, -131073, 65536, 1, -131074, 0, 0, -196612, 65536, 0, -196611, 65536, 0, -196610, 65536, 0, -196609, 65536, 0, -262144, 65536, 0, -262143, 65536, 0, -262142, 65536, 0, -196606, 65536, 0, -131070, 65536, 0, -65534, 65536, 0, 3, 65536, 0, 4, 65536, 0, -65532, 65536, 0, -131068, 65536, 0, -131069, 65536, 0, -196605, 65536, 0, -262141, 65536, 0, -262140, 65536, 0, -196604, 65536, 0, -65533, 65536, 0, -262148, 0, 0, -262147, 0, 0, -262146, 0, 0, -262145, 0, 0, -327680, 0, 0, -327679, 0, 0, -327678, 0, 0, -327677, 0, 0, -327676, 0, 0, -327675, 0, 0, -262139, 0, 0, -196603, 0, 0, -131067, 0, 0, -65531, 0, 0, 5, 0, 0, -327684, 0, 0, -327683, 65536, 0, -327682, 0, 0, -327681, 65536, 0, -393216, 0, 0, -393215, 65536, 0, -393214, 0, 0, -393213, 65536, 0, -393212, 0, 0, -393211, 65536, 0, -458748, 0, 0, -458747, 65536, 0, -458750, 0, 0, -458749, 65536, 0, -458752, 0, 0, -458751, 65536, 0, -393218, 0, 0, -393217, 65536, 0, -393220, 0, 0, -393219, 65536, 0, 6, 0, 0, 7, 65536, 0, 8, 0, 0, 9, 65536, 0, 10, 0, 0, 11, 0, 0, -65528, 0, 0, -65527, 65536, 0, -65530, 0, 0, -65529, 65536, 0, -65526, 0, 0, -65525, 0, 0, -131062, 0, 0, -131061, 0, 0, -131064, 0, 0, -131063, 65536, 0, -131066, 0, 0, -131065, 65536, 0, -196602, 0, 0, -196601, 65536, 0, -196600, 0, 0, -196599, 65536, 0, -196598, 0, 0, -196597, 0, 0, -262134, 0, 0, -262133, 0, 0, -262136, 0, 0, -262135, 65536, 0, -262138, 0, 0, -262137, 65536, 0, -458746, 0, 0, -458745, 65536, 0, -458744, 0, 0, -458743, 65536, 0, -458742, 0, 0, -458741, 0, 0, -393206, 0, 0, -393205, 0, 0, -327670, 0, 0, -327669, 0, 0, -327672, 0, 0, -327671, 65536, 0, -327674, 0, 0, -327673, 65536, 0, -393210, 0, 0, -393209, 65536, 0, -393208, 0, 0, -393207, 65536, 0, 12, 65536, 0, -65524, 65536, 0, -131060, 65536, 0, -196596, 65536, 0, -262132, 65536, 0, -327668, 65536, 0, -393204, 65536, 0, -458740, 65536, 0)
 
