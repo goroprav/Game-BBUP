@@ -188,7 +188,7 @@ frame_progress = 0.590705
 script = ExtResource("9_6wsnv")
 
 [node name="Test" parent="." instance=ExtResource("10_1o0a2")]
-position = Vector2(799, 494)
+position = Vector2(1324, 476)
 
 [node name="BeadRoom2" type="Sprite2D" parent="."]
 position = Vector2(211, 515)
