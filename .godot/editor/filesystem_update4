@@ -1,2 +1,10 @@
 res://First room.tscn
 res://Person 1.tscn
+res://Elements/wall_general.tscn
+res://Teleport1.tscn
+res://scene_1.tscn
+res://Elements/bed_1.tscn
+res://Elements/microwave.tscn
+res://Elements/bed_2.tscn
+res://Elements/floor.tscn
+res://Elements/left_wall.tscn

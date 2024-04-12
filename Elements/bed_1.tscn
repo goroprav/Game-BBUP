@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://ce6cps0bki4bq"]
+
+[ext_resource type="Texture2D" uid="uid://cnrcc36wn0wgl" path="res://Sprite/Furniture/bead room1.png" id="1_mh8yt"]
+
+[node name="bed1" type="StaticBody2D"]
+collision_mask = 6
+
+[node name="bedSprite" type="Sprite2D" parent="."]
+scale = Vector2(4.685, 4.685)
+texture = ExtResource("1_mh8yt")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-173, 41, 167, 35, 224, -12, 224, -46, 186, -70, -69, -69, -172, 0)

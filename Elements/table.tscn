@@ -1,0 +1,52 @@
+[gd_scene load_steps=8 format=3 uid="uid://cx04biwuod1m2"]
+
+[ext_resource type="Texture2D" uid="uid://bl51ur4182eaq" path="res://Sprite/Furniture/table-Sheet111.png" id="1_7666r"]
+[ext_resource type="Script" path="res://AnimatedSprite2D.gd" id="2_a3flh"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y2hek"]
+atlas = ExtResource("1_7666r")
+region = Rect2(0, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cypyh"]
+atlas = ExtResource("1_7666r")
+region = Rect2(300, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gojs0"]
+atlas = ExtResource("1_7666r")
+region = Rect2(100, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aemqw"]
+atlas = ExtResource("1_7666r")
+region = Rect2(200, 0, 100, 100)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_c5b7e"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y2hek")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cypyh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gojs0")
+}, {
+"duration": 1.1,
+"texture": SubResource("AtlasTexture_aemqw")
+}],
+"loop": true,
+"name": &"default",
+"speed": 4.0
+}]
+
+[node name="table" type="StaticBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+process_mode = 3
+scale = Vector2(4.32, 4.32)
+sprite_frames = SubResource("SpriteFrames_c5b7e")
+autoplay = "default"
+script = ExtResource("2_a3flh")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-7, -88, 174, -92, 168, 40, 165, -81, 32, 54, 34, 157, -149, 157, -152, 53)

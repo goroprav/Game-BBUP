@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://b8u0l5u633fa"]
+
+[ext_resource type="Texture2D" uid="uid://dwk4g8m3hp1ar" path="res://Sprite/Textures/wall textyre 1.png" id="1_72g0q"]
+[ext_resource type="Texture2D" uid="uid://cipp35hq3n5k0" path="res://Sprite/Textures/wall textyre 2.png" id="2_us4c2"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_47ptr"]
+texture = ExtResource("1_72g0q")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xs3j1"]
+texture = ExtResource("2_us4c2")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_yth0l"]
+sources/0 = SubResource("TileSetAtlasSource_47ptr")
+sources/1 = SubResource("TileSetAtlasSource_xs3j1")
+
+[node name="leftWall" type="StaticBody2D"]
+collision_mask = 6
+
+[node name="Stena left" type="TileMap" parent="."]
+visibility_layer = 8
+position = Vector2(374, 803)
+rotation = -1.5708
+scale = Vector2(7, 7)
+skew = -0.785398
+tile_set = SubResource("TileSet_yth0l")
+format = 2
+layer_0/tile_data = PackedInt32Array(-327674, 65537, 0, -393210, 65537, 1, -262138, 1, 1, -327671, 1, 1, -327670, 1, 1, -327673, 1, 1, -393208, 65537, 0, -393209, 1, 0, -393211, 1, 1, -327675, 65537, 0, -262139, 65537, 1, -196602, 65537, 0, -131066, 1, 0, -65530, 1, 1, -65531, 1, 0, -131067, 65537, 0, -196603, 1, 0, -65529, 1, 1, -65528, 65537, 1, -65527, 65537, 1, -131063, 65537, 0, -131062, 1, 1, -196598, 65537, 1, -262134, 65537, 0, -65526, 1, 0, -196597, 65537, 1, -262133, 65537, 0, -327669, 65537, 1, -393206, 1, 0, -393207, 1, 0, -393205, 65537, 0, -131061, 65537, 1, -65525, 1, 0, -458747, 1, 0, -458746, 1, 0, -458745, 1, 0, -458744, 1, 0, -458743, 1, 0, -458742, 1, 0, -458741, 65537, 0, -458740, 1, 0, -393204, 1, 1, -458739, 65537, 0, -393203, 65537, 1, -196596, 1, 0, -131060, 1, 1, -196595, 65537, 0, -131059, 65537, 1, -327668, 1, 0, -262132, 1, 1, -327667, 65537, 0, -262131, 65537, 1, -65524, 1, 0, -65523, 65537, 0, -262137, 1, 0, -196601, 1, 1, -262136, 65537, 0, -196600, 65537, 1, -327672, 65537, 1, -131065, 1, 0, -131064, 65537, 0, -262135, 1, 0, -196599, 1, 1)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-180, 798, 374, 242, 373, 155, -181, 679)
