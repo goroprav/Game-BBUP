@@ -168,5 +168,5 @@ position_smoothing_enabled = true
 drag_horizontal_enabled = true
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-position = Vector2(10, -1)
-polygon = PackedVector2Array(50, -21, -13, 11, 146, 10, 64, -24)
+position = Vector2(6, -2)
+polygon = PackedVector2Array(50, -21, 6, 10, 112, 10, 64, -24)

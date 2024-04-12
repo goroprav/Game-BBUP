@@ -84,10 +84,10 @@ light_mask = 0
 visibility_layer = 2
 position = Vector2(814, 232)
 
-[node name="bed2" parent="." instance=ExtResource("12_4rphf")]
-position = Vector2(222, 520)
-
 [node name="Test" parent="." instance=ExtResource("10_1o0a2")]
-position = Vector2(1276, 481)
+position = Vector2(1062, 536)
+
+[node name="bed2" parent="." instance=ExtResource("12_4rphf")]
+position = Vector2(231, 520)
 
 [connection signal="body_entered" from="Teleport" to="Test" method="_on_node_2d_body_entered"]
