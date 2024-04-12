@@ -151,7 +151,7 @@ collision_mask = 5
 script = SubResource("GDScript_42apd")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(79, -158)
+position = Vector2(78, -161)
 scale = Vector2(4.23022, 4.16615)
 sprite_frames = SubResource("SpriteFrames_wjq7m")
 animation = &"idle"
@@ -169,4 +169,4 @@ drag_horizontal_enabled = true
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 position = Vector2(6, -2)
-polygon = PackedVector2Array(50, -21, 6, 10, 112, 10, 64, -24)
+polygon = PackedVector2Array(19, -18, 6, 10, 112, 10, 105, -18)

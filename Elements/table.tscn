@@ -50,4 +50,5 @@ autoplay = "default"
 script = ExtResource("2_a3flh")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PackedVector2Array(-7, -88, 174, -92, 168, 40, 165, -81, 32, 54, 34, 157, -149, 157, -152, 53)
+position = Vector2(8, -2)
+polygon = PackedVector2Array(-7, -88, 154, -85, 158, 39, 23, 160, -149, 157, -152, 53)
