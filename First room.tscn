@@ -1,10 +1,11 @@
-[gd_scene load_steps=16 format=3 uid="uid://dcar487npruux"]
+[gd_scene load_steps=17 format=3 uid="uid://dcar487npruux"]
 
 [ext_resource type="PackedScene" uid="uid://b8u0l5u633fa" path="res://Elements/left_wall.tscn" id="1_cve1a"]
 [ext_resource type="PackedScene" uid="uid://ddl5gaerky41f" path="res://Elements/floor.tscn" id="1_pmjuy"]
 [ext_resource type="Texture2D" uid="uid://mmr8b5y2u2f6" path="res://Sprite/Furniture/Window 1.png" id="5_ajlb1"]
 [ext_resource type="PackedScene" uid="uid://cx04biwuod1m2" path="res://Elements/table.tscn" id="8_28mnf"]
 [ext_resource type="PackedScene" uid="uid://c804j7ocmov0q" path="res://Person 1.tscn" id="10_1o0a2"]
+[ext_resource type="AudioStream" uid="uid://bo8rc5jvowtmg" path="res://music/ForestWalk-320bit(chosic.com).mp3" id="11_yy2m4"]
 [ext_resource type="PackedScene" uid="uid://ck0xrq5ie43e5" path="res://Elements/bed_2.tscn" id="12_4rphf"]
 [ext_resource type="PackedScene" uid="uid://dycvt8b3tmuqb" path="res://Teleport1.tscn" id="12_6h5rg"]
 [ext_resource type="PackedScene" uid="uid://ce6cps0bki4bq" path="res://Elements/bed_1.tscn" id="13_8wdnh"]
@@ -89,5 +90,10 @@ position = Vector2(1048, 502)
 
 [node name="bed2" parent="." instance=ExtResource("12_4rphf")]
 position = Vector2(231, 520)
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_yy2m4")
+volume_db = -25.0
+autoplay = true
 
 [connection signal="body_entered" from="Teleport" to="Test" method="_on_node_2d_body_entered"]
