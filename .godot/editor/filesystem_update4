@@ -1,6 +1,8 @@
 res://First room.tscn
+res://Elements/bed_2.tscn
+res://Elements/bed_1.tscn
+res://Elements/table.tscn
 res://Person 1.tscn
-res://menu.tscn
-res://menu.gd
 res://scene_1.tscn
-res://AnimatedSprite2D.gd
+res://Elements/floor.tscn
+res://Elements/microwave.tscn
