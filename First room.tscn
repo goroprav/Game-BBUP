@@ -86,7 +86,7 @@ visibility_layer = 2
 position = Vector2(821, 215)
 
 [node name="Test" parent="." instance=ExtResource("10_1o0a2")]
-position = Vector2(1048, 502)
+position = Vector2(804, 416)
 
 [node name="bed2" parent="." instance=ExtResource("12_4rphf")]
 position = Vector2(231, 520)
