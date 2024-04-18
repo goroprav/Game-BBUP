@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://by3giybxvnb7y"
+path="res://.godot/imported/byistraya-hodba-po-betonnoy-poverhnosti-26128 (mp3cut.net) (1).mp3-ac19fb233bc300d4ac7334c06fc58680.mp3str"
+
+[deps]
+
+source_file="res://sound/byistraya-hodba-po-betonnoy-poverhnosti-26128 (mp3cut.net) (1).mp3"
+dest_files=["res://.godot/imported/byistraya-hodba-po-betonnoy-poverhnosti-26128 (mp3cut.net) (1).mp3-ac19fb233bc300d4ac7334c06fc58680.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
