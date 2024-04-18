@@ -1,7 +1,7 @@
-[gd_scene load_steps=19 format=3 uid="uid://c804j7ocmov0q"]
+[gd_scene load_steps=24 format=3 uid="uid://c804j7ocmov0q"]
 
 [ext_resource type="Texture2D" uid="uid://b53hyvvmh0c13" path="res://Sprite/Person 1 Sprites/persona idle Sheet.png" id="1_0gmvi"]
-[ext_resource type="Texture2D" uid="uid://dpgdkdadofnam" path="res://Sprite/Person 1 Sprites/Peson walkt.png" id="2_g7mmo"]
+[ext_resource type="Texture2D" uid="uid://8gvtmt8k6iq7" path="res://Sprite/Person 1 Sprites/Run_proba.png" id="2_l8ee5"]
 [ext_resource type="AudioStream" uid="uid://by3giybxvnb7y" path="res://sound/byistraya-hodba-po-betonnoy-poverhnosti-26128 (mp3cut.net) (1).mp3" id="3_dx756"]
 
 [sub_resource type="GDScript" id="GDScript_42apd"]
@@ -86,17 +86,37 @@ region = Rect2(800, 0, 100, 100)
 atlas = ExtResource("1_0gmvi")
 region = Rect2(900, 0, 100, 100)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_10j7j"]
-atlas = ExtResource("2_g7mmo")
-region = Rect2(0, 0, 100, 100)
+[sub_resource type="AtlasTexture" id="AtlasTexture_8p4vc"]
+atlas = ExtResource("2_l8ee5")
+region = Rect2(0, 0, 184, 137)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_27uaq"]
-atlas = ExtResource("2_g7mmo")
-region = Rect2(100, 0, 100, 100)
+[sub_resource type="AtlasTexture" id="AtlasTexture_0w16c"]
+atlas = ExtResource("2_l8ee5")
+region = Rect2(184, 0, 184, 137)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_vn3xs"]
-atlas = ExtResource("2_g7mmo")
-region = Rect2(200, 0, 100, 100)
+[sub_resource type="AtlasTexture" id="AtlasTexture_aj0ui"]
+atlas = ExtResource("2_l8ee5")
+region = Rect2(368, 0, 184, 137)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ejhp7"]
+atlas = ExtResource("2_l8ee5")
+region = Rect2(552, 0, 184, 137)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2h3xc"]
+atlas = ExtResource("2_l8ee5")
+region = Rect2(736, 0, 184, 137)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_enkj2"]
+atlas = ExtResource("2_l8ee5")
+region = Rect2(920, 0, 184, 137)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q7jdy"]
+atlas = ExtResource("2_l8ee5")
+region = Rect2(1104, 0, 184, 137)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1ym31"]
+atlas = ExtResource("2_l8ee5")
+region = Rect2(1288, 0, 184, 137)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_wjq7m"]
 animations = [{
@@ -137,17 +157,32 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_10j7j")
+"texture": SubResource("AtlasTexture_8p4vc")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_27uaq")
+"texture": SubResource("AtlasTexture_0w16c")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_vn3xs")
+"texture": SubResource("AtlasTexture_aj0ui")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ejhp7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2h3xc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_enkj2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q7jdy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1ym31")
 }],
 "loop": true,
 "name": &"walk",
-"speed": 15.0
+"speed": 10.0
 }]
 
 [node name="Test" type="CharacterBody2D"]
@@ -161,6 +196,8 @@ scale = Vector2(4.23022, 4.16615)
 sprite_frames = SubResource("SpriteFrames_wjq7m")
 animation = &"walk"
 autoplay = "idle"
+frame = 5
+frame_progress = 0.89452
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(52, -145)
