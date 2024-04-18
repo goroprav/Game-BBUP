@@ -6,8 +6,9 @@
 collision_mask = 6
 
 [node name="Microwave" type="Sprite2D" parent="."]
-scale = Vector2(2.6275, 2.6275)
+position = Vector2(19.3125, -19.3125)
+scale = Vector2(3.01375, 3.01375)
 texture = ExtResource("1_c8vps")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PackedVector2Array(-68, 114, 61, 120, 107, 67, 101, -42, 64, -14, -63, -17)
+polygon = PackedVector2Array(-61, 112, 91, 118, 143, 58, 140, -70, 92, -33, -58, -37)
