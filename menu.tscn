@@ -1,25 +1,57 @@
-[gd_scene load_steps=3 format=3 uid="uid://f8qn0yfcxcif"]
+[gd_scene load_steps=8 format=3 uid="uid://f8qn0yfcxcif"]
 
 [ext_resource type="Script" path="res://menu.gd" id="1_51hwq"]
+[ext_resource type="Texture2D" uid="uid://bkrlkccqpuv28" path="res://Sprite/Textures/Bloody Battles.png" id="2_322ls"]
 [ext_resource type="AudioStream" uid="uid://colmbwy5l1los" path="res://music/alexander-nakarada-superepic(chosic.com).mp3" id="2_xkwp0"]
+[ext_resource type="FontFile" uid="uid://bdpqw61ox6tba" path="res://Sprite/Textures/IBMPlexMono-Medium.ttf" id="3_ds16x"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oqkks"]
+bg_color = Color(0, 0, 0, 0.870588)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.8, 0.0235294, 0.0235294, 1)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_g811h"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_owbwh"]
+bg_color = Color(0, 0, 0, 0.870588)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.8, 0, 0, 1)
 
 [node name="Menu" type="Node2D"]
 script = ExtResource("1_51hwq")
 
+[node name="BloodyBattles" type="Sprite2D" parent="."]
+position = Vector2(576, 321.5)
+scale = Vector2(1.84219, 1.90719)
+texture = ExtResource("2_322ls")
+
 [node name="Play" type="Button" parent="."]
-offset_left = 258.0
-offset_top = 96.0
-offset_right = 891.0
-offset_bottom = 265.0
-theme_override_font_sizes/font_size = 70
+offset_left = 4.0
+offset_top = 370.0
+offset_right = 445.0
+offset_bottom = 500.0
+theme_override_colors/font_color = Color(0.94902, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_ds16x")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_oqkks")
 text = "Play"
+icon = SubResource("ViewportTexture_g811h")
 
 [node name="Quit" type="Button" parent="."]
-offset_left = 260.0
-offset_top = 352.0
-offset_right = 893.0
-offset_bottom = 521.0
-theme_override_font_sizes/font_size = 70
+offset_left = 4.0
+offset_top = 500.0
+offset_right = 445.0
+offset_bottom = 636.0
+theme_override_colors/font_color = Color(0.862745, 0, 0, 0.996078)
+theme_override_fonts/font = ExtResource("3_ds16x")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_owbwh")
 text = "Quit
 "
 
