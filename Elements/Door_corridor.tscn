@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://ddqn0rr2b75sx"]
+
+[ext_resource type="Texture2D" uid="uid://lgowegcmvabx" path="res://Sprite/Furniture/Door corridor.png" id="1_jcqam"]
+
+[node name="DoorCorridor" type="Sprite2D"]
+position = Vector2(1628, 282)
+scale = Vector2(5.42063, 5.53437)
+texture = ExtResource("1_jcqam")
