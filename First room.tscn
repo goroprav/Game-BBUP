@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://dcar487npruux"]
+[gd_scene load_steps=18 format=3 uid="uid://dcar487npruux"]
 
 [ext_resource type="PackedScene" uid="uid://b8u0l5u633fa" path="res://Elements/left_wall.tscn" id="1_cve1a"]
 [ext_resource type="PackedScene" uid="uid://ddl5gaerky41f" path="res://Elements/floor.tscn" id="1_pmjuy"]
@@ -8,6 +8,7 @@
 [ext_resource type="AudioStream" uid="uid://bo8rc5jvowtmg" path="res://music/ForestWalk-320bit(chosic.com).mp3" id="11_yy2m4"]
 [ext_resource type="PackedScene" uid="uid://ck0xrq5ie43e5" path="res://Elements/bed_2.tscn" id="12_4rphf"]
 [ext_resource type="PackedScene" uid="uid://dycvt8b3tmuqb" path="res://Teleport1.tscn" id="12_6h5rg"]
+[ext_resource type="PackedScene" uid="uid://mhxui6qsry0i" path="res://dummy.tscn" id="12_o82cd"]
 [ext_resource type="PackedScene" uid="uid://ce6cps0bki4bq" path="res://Elements/bed_1.tscn" id="13_8wdnh"]
 [ext_resource type="PackedScene" uid="uid://dnsekkbeo8si1" path="res://Elements/microwave.tscn" id="13_iew3o"]
 [ext_resource type="PackedScene" uid="uid://bg6belb14dvmh" path="res://Elements/wall_general.tscn" id="13_mkaog"]
@@ -86,7 +87,7 @@ visibility_layer = 2
 position = Vector2(821, 215)
 
 [node name="Test" parent="." instance=ExtResource("10_1o0a2")]
-position = Vector2(804, 416)
+position = Vector2(470, 536)
 
 [node name="bed2" parent="." instance=ExtResource("12_4rphf")]
 position = Vector2(231, 520)
@@ -95,5 +96,8 @@ position = Vector2(231, 520)
 stream = ExtResource("11_yy2m4")
 volume_db = -25.0
 autoplay = true
+
+[node name="Area2D" parent="." instance=ExtResource("12_o82cd")]
+position = Vector2(921, 543)
 
 [connection signal="body_entered" from="Teleport" to="Test" method="_on_node_2d_body_entered"]

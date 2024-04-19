@@ -1,6 +1,5 @@
-res://dummy.gd
-res://dummy.tscn
-res://Person 1.tscn
 res://First room.tscn
+res://Person 1.tscn
 res://menu.tscn
 res://scene_1.tscn
+res://dummy.tscn

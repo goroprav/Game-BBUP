@@ -14,7 +14,6 @@ func _process(delta):
 func _on_area_entered(area):
 	hit=true;
 
-
 func _on_animated_sprite_2d_animation_finished():
 	if $AnimatedSprite2D.animation=="hit":
 		hit = false;

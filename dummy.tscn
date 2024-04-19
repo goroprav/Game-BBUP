@@ -80,16 +80,23 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3d2u4"]
+size = Vector2(181, 233)
 
 [node name="Area2D" type="Area2D"]
 script = ExtResource("1_ycycc")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(154, -159)
+scale = Vector2(10.25, 9.64062)
 sprite_frames = SubResource("SpriteFrames_57kac")
 animation = &"hit"
 autoplay = "idle"
+frame = 7
+frame_progress = 1.0
+flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(160.5, -119.5)
 shape = SubResource("RectangleShape2D_3d2u4")
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]

@@ -1,15 +1,17 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1713542094
+::res://::1713551515
 AnimatedSprite2D.gd::GDScript::-1::1713541961::0::1::::<>AnimatedSprite2D<>::
 default_bus_layout.tres::AudioBusLayout::855461507302038552::1713541961::0::1::::<><>::
+dummy.gd::GDScript::-1::1713550881::0::1::::<>Area2D<>::
+dummy.tscn::PackedScene::858149443473989282::1713551023::0::1::::<><>::uid://duontdkvauqxf::::res://Enemy/dummy/dummy.png<>res://dummy.gd
 export_presets.cfg::TextFile::-1::1713541961::0::1::::<><>::
-First room.tscn::PackedScene::7300725498571333415::1713541961::0::1::::<><>::uid://b8u0l5u633fa::::res://Elements/left_wall.tscn<>uid://ddl5gaerky41f::::res://Elements/floor.tscn<>uid://mmr8b5y2u2f6::::res://Sprite/Furniture/Window 1.png<>uid://cx04biwuod1m2::::res://Elements/table.tscn<>uid://c804j7ocmov0q::::res://Person 1.tscn<>uid://bo8rc5jvowtmg::::res://music/ForestWalk-320bit(chosic.com).mp3<>uid://ck0xrq5ie43e5::::res://Elements/bed_2.tscn<>uid://dycvt8b3tmuqb::::res://Teleport1.tscn<>uid://ce6cps0bki4bq::::res://Elements/bed_1.tscn<>uid://dnsekkbeo8si1::::res://Elements/microwave.tscn<>uid://bg6belb14dvmh::::res://Elements/wall_general.tscn
+First room.tscn::PackedScene::7300725498571333415::1713551023::0::1::::<><>::uid://b8u0l5u633fa::::res://Elements/left_wall.tscn<>uid://ddl5gaerky41f::::res://Elements/floor.tscn<>uid://mmr8b5y2u2f6::::res://Sprite/Furniture/Window 1.png<>uid://cx04biwuod1m2::::res://Elements/table.tscn<>uid://c804j7ocmov0q::::res://Person 1.tscn<>uid://bo8rc5jvowtmg::::res://music/ForestWalk-320bit(chosic.com).mp3<>uid://ck0xrq5ie43e5::::res://Elements/bed_2.tscn<>uid://dycvt8b3tmuqb::::res://Teleport1.tscn<>uid://mhxui6qsry0i::::res://dummy.tscn<>uid://ce6cps0bki4bq::::res://Elements/bed_1.tscn<>uid://dnsekkbeo8si1::::res://Elements/microwave.tscn<>uid://bg6belb14dvmh::::res://Elements/wall_general.tscn
 icon.svg::CompressedTexture2D::4690161607792094015::1713541961::1713541991::1::::<><>::
 menu.gd::GDScript::-1::1713541961::0::1::::<>Node2D<>::
-menu.tscn::PackedScene::420064721668977557::1713541961::0::1::::<><>::res://menu.gd<>uid://bkrlkccqpuv28::::res://Sprite/Textures/Bloody Battles.png<>uid://colmbwy5l1los::::res://music/alexander-nakarada-superepic(chosic.com).mp3<>uid://qwaa8tgw50j6::::res://Sprite/Furniture/IBMPlexMono-Italic.ttf
-Person 1.tscn::PackedScene::7142461218710085414::1713541961::0::1::::<><>::uid://b53hyvvmh0c13::::res://Sprite/Person 1 Sprites/Person idle.png<>uid://b7y47m81hf0d::::res://Sprite/Person 1 Sprites/Person walk.png<>uid://by3giybxvnb7y::::res://sound/byistraya-hodba-po-betonnoy-poverhnosti-26128 (mp3cut.net) (1).mp3
+menu.tscn::PackedScene::420064721668977557::1713551023::0::1::::<><>::res://menu.gd<>uid://bkrlkccqpuv28::::res://Sprite/Textures/Bloody Battles.png<>uid://colmbwy5l1los::::res://music/alexander-nakarada-superepic(chosic.com).mp3<>uid://qwaa8tgw50j6::::res://Sprite/Furniture/IBMPlexMono-Italic.ttf
+Person 1.tscn::PackedScene::7142461218710085414::1713551023::0::1::::<><>::uid://b53hyvvmh0c13::::res://Sprite/Person 1 Sprites/Person idle.png<>uid://c6m0bynnnsknl::::res://Sprite/Person 1 Sprites/Person attac.png<>uid://b7y47m81hf0d::::res://Sprite/Person 1 Sprites/Person walk.png<>uid://by3giybxvnb7y::::res://sound/byistraya-hodba-po-betonnoy-poverhnosti-26128 (mp3cut.net) (1).mp3
 README.md::TextFile::-1::1713541961::0::1::::<><>::
-scene_1.tscn::PackedScene::3721592055895008683::1713541961::0::1::::<><>::uid://dycvt8b3tmuqb::::res://Teleport1.tscn<>uid://c804j7ocmov0q::::res://Person 1.tscn<>uid://cipp35hq3n5k0::::res://Sprite/Textures/wall textyre 2.png<>uid://bwysdh1h6n3oa::::res://Sprite/Textures/Plitka1 white.png<>uid://ddqn0rr2b75sx::::res://Elements/Door_corridor.tscn
+scene_1.tscn::PackedScene::3721592055895008683::1713551023::0::1::::<><>::uid://dycvt8b3tmuqb::::res://Teleport1.tscn<>uid://c804j7ocmov0q::::res://Person 1.tscn<>uid://cipp35hq3n5k0::::res://Sprite/Textures/wall textyre 2.png<>uid://bwysdh1h6n3oa::::res://Sprite/Textures/Plitka1 white.png<>uid://ddqn0rr2b75sx::::res://Elements/Door_corridor.tscn
 Teleport1.tscn::PackedScene::8849233776945925441::1713541961::0::1::::<><>::
 Test.gd::GDScript::-1::1713541961::0::1::::<>CharacterBody2D<>::
 ::res://Elements/::1713541961
@@ -30,7 +32,7 @@ plugin.cfg::TextFile::-1::1713541961::0::1::::<><>::
 THIRDPARTY.md::TextFile::-1::1713541961::0::1::::<><>::
 ::res://godot-git-plugin/linux/::1713541961
 ::res://godot-git-plugin/macos/::1713541961
-::res://godot-git-plugin/win64/::1713541984
+::res://godot-git-plugin/win64/::1713551509
 ::res://music/::1713541961
 alexander-nakarada-superepic(chosic.com).mp3::AudioStreamMP3::5778924917288222170::1713541961::1713541961::1::::<><>::
 ForestWalk-320bit(chosic.com).mp3::AudioStreamMP3::3438226311551850458::1713541961::1713541961::1::::<><>::
