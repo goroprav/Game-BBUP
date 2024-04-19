@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://menu.gd" id="1_51hwq"]
 [ext_resource type="Texture2D" uid="uid://bkrlkccqpuv28" path="res://Sprite/Textures/Bloody Battles.png" id="2_322ls"]
 [ext_resource type="AudioStream" uid="uid://colmbwy5l1los" path="res://music/alexander-nakarada-superepic(chosic.com).mp3" id="2_xkwp0"]
-[ext_resource type="FontFile" uid="uid://bdpqw61ox6tba" path="res://Sprite/Textures/IBMPlexMono-Medium.ttf" id="3_ds16x"]
+[ext_resource type="FontFile" uid="uid://qwaa8tgw50j6" path="res://Sprite/Furniture/IBMPlexMono-Italic.ttf" id="3_ccjqo"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oqkks"]
 bg_color = Color(0, 0, 0, 0.870588)
@@ -37,7 +37,7 @@ offset_top = 370.0
 offset_right = 445.0
 offset_bottom = 500.0
 theme_override_colors/font_color = Color(0.94902, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_ds16x")
+theme_override_fonts/font = ExtResource("3_ccjqo")
 theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = SubResource("StyleBoxFlat_oqkks")
 text = "Play"
@@ -49,7 +49,7 @@ offset_top = 500.0
 offset_right = 445.0
 offset_bottom = 636.0
 theme_override_colors/font_color = Color(0.862745, 0, 0, 0.996078)
-theme_override_fonts/font = ExtResource("3_ds16x")
+theme_override_fonts/font = ExtResource("3_ccjqo")
 theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = SubResource("StyleBoxFlat_owbwh")
 text = "Quit

@@ -1,7 +1,7 @@
-[gd_scene load_steps=24 format=3 uid="uid://c804j7ocmov0q"]
+[gd_scene load_steps=29 format=3 uid="uid://c804j7ocmov0q"]
 
-[ext_resource type="Texture2D" uid="uid://b53hyvvmh0c13" path="res://Sprite/Person 1 Sprites/persona idle Sheet.png" id="1_0gmvi"]
-[ext_resource type="Texture2D" uid="uid://b7y47m81hf0d" path="res://Sprite/Person 1 Sprites/Run_proba.png" id="2_vcduw"]
+[ext_resource type="Texture2D" uid="uid://b53hyvvmh0c13" path="res://Sprite/Person 1 Sprites/Person idle.png" id="1_0gmvi"]
+[ext_resource type="Texture2D" uid="uid://b7y47m81hf0d" path="res://Sprite/Person 1 Sprites/Person walk.png" id="2_raa8k"]
 [ext_resource type="AudioStream" uid="uid://by3giybxvnb7y" path="res://sound/byistraya-hodba-po-betonnoy-poverhnosti-26128 (mp3cut.net) (1).mp3" id="3_dx756"]
 
 [sub_resource type="GDScript" id="GDScript_42apd"]
@@ -46,6 +46,25 @@ func _on_node_2d_body_entered(_body):
 	get_tree().change_scene_to_file(\"res://scene_1.tscn\")
 "
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_fipvy"]
+load_path = "res://.godot/imported/Person attac 1t.png-af518f25d5472219c4ef6f83befafe98.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5ffit"]
+atlas = SubResource("CompressedTexture2D_fipvy")
+region = Rect2(0, 0, 184, 137)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8ete6"]
+atlas = SubResource("CompressedTexture2D_fipvy")
+region = Rect2(184, 0, 184, 137)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rl8yn"]
+atlas = SubResource("CompressedTexture2D_fipvy")
+region = Rect2(368, 0, 184, 137)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7h61w"]
+atlas = SubResource("CompressedTexture2D_fipvy")
+region = Rect2(552, 0, 184, 137)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_587cx"]
 atlas = ExtResource("1_0gmvi")
 region = Rect2(0, 0, 100, 100)
@@ -87,39 +106,56 @@ atlas = ExtResource("1_0gmvi")
 region = Rect2(900, 0, 100, 100)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cby37"]
-atlas = ExtResource("2_vcduw")
+atlas = ExtResource("2_raa8k")
 region = Rect2(0, 0, 184, 137)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vmlck"]
-atlas = ExtResource("2_vcduw")
+atlas = ExtResource("2_raa8k")
 region = Rect2(184, 0, 184, 137)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4pkll"]
-atlas = ExtResource("2_vcduw")
+atlas = ExtResource("2_raa8k")
 region = Rect2(368, 0, 184, 137)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tjapu"]
-atlas = ExtResource("2_vcduw")
+atlas = ExtResource("2_raa8k")
 region = Rect2(552, 0, 184, 137)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tvvd4"]
-atlas = ExtResource("2_vcduw")
+atlas = ExtResource("2_raa8k")
 region = Rect2(736, 0, 184, 137)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_efi0v"]
-atlas = ExtResource("2_vcduw")
+atlas = ExtResource("2_raa8k")
 region = Rect2(920, 0, 184, 137)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_irdt0"]
-atlas = ExtResource("2_vcduw")
+atlas = ExtResource("2_raa8k")
 region = Rect2(1104, 0, 184, 137)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yj3jk"]
-atlas = ExtResource("2_vcduw")
+atlas = ExtResource("2_raa8k")
 region = Rect2(1288, 0, 184, 137)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_wjq7m"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5ffit")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8ete6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rl8yn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7h61w")
+}],
+"loop": true,
+"name": &"Attack",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_587cx")
@@ -191,28 +227,27 @@ collision_mask = 5
 script = SubResource("GDScript_42apd")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(75, -174)
+position = Vector2(166, -169)
 scale = Vector2(4.23022, 4.16615)
 sprite_frames = SubResource("SpriteFrames_wjq7m")
 animation = &"walk"
 autoplay = "idle"
-frame_progress = 0.55452
+frame_progress = 0.718047
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(52, -145)
 scale = Vector2(11.8636, 11.6839)
 process_callback = 0
 limit_left = -10
-limit_top = -150
-limit_bottom = 650
 position_smoothing_enabled = true
 drag_horizontal_enabled = true
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-position = Vector2(-26, -1)
+position = Vector2(59, 18)
 scale = Vector2(1.49057, 1)
-polygon = PackedVector2Array(19, -18, 6, 10, 112, 10, 105, -18)
+polygon = PackedVector2Array(13.4177, -18, 6, 10, 55.0127, 14, 124.785, 11, 117.405, -18)
 
 [node name="WalkSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_dx756")
 volume_db = -10.0
+pitch_scale = 0.85

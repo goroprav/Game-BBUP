@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dpgdkdadofnam"
-path="res://.godot/imported/Peson walkt.png-18ee764a9f5b58737aa5c105ae31b2ad.ctex"
+uid="uid://c6m0bynnnsknl"
+path="res://.godot/imported/Person attac.png-e5b3b789cabb3b70083b72ded4ee0c1e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprite/Person 1 Sprites/Peson walkt.png"
-dest_files=["res://.godot/imported/Peson walkt.png-18ee764a9f5b58737aa5c105ae31b2ad.ctex"]
+source_file="res://Sprite/Person 1 Sprites/Person attac.png"
+dest_files=["res://.godot/imported/Person attac.png-e5b3b789cabb3b70083b72ded4ee0c1e.ctex"]
 
 [params]
 

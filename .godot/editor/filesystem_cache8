@@ -1,15 +1,15 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1713477320
+::res://::1713538619
 AnimatedSprite2D.gd::GDScript::-1::1713433982::0::1::::<>AnimatedSprite2D<>::
 default_bus_layout.tres::AudioBusLayout::855461507302038552::1713433982::0::1::::<><>::
 export_presets.cfg::TextFile::-1::1713433982::0::1::::<><>::
-First room.tscn::PackedScene::7300725498571333415::1713477320::0::1::::<><>::uid://b8u0l5u633fa::::res://Elements/left_wall.tscn<>uid://ddl5gaerky41f::::res://Elements/floor.tscn<>uid://mmr8b5y2u2f6::::res://Sprite/Furniture/Window 1.png<>uid://cx04biwuod1m2::::res://Elements/table.tscn<>uid://c804j7ocmov0q::::res://Person 1.tscn<>uid://bo8rc5jvowtmg::::res://music/ForestWalk-320bit(chosic.com).mp3<>uid://ck0xrq5ie43e5::::res://Elements/bed_2.tscn<>uid://dycvt8b3tmuqb::::res://Teleport1.tscn<>uid://ce6cps0bki4bq::::res://Elements/bed_1.tscn<>uid://dnsekkbeo8si1::::res://Elements/microwave.tscn<>uid://bg6belb14dvmh::::res://Elements/wall_general.tscn
+First room.tscn::PackedScene::7300725498571333415::1713538480::0::1::::<><>::uid://b8u0l5u633fa::::res://Elements/left_wall.tscn<>uid://ddl5gaerky41f::::res://Elements/floor.tscn<>uid://mmr8b5y2u2f6::::res://Sprite/Furniture/Window 1.png<>uid://cx04biwuod1m2::::res://Elements/table.tscn<>uid://c804j7ocmov0q::::res://Person 1.tscn<>uid://bo8rc5jvowtmg::::res://music/ForestWalk-320bit(chosic.com).mp3<>uid://ck0xrq5ie43e5::::res://Elements/bed_2.tscn<>uid://dycvt8b3tmuqb::::res://Teleport1.tscn<>uid://ce6cps0bki4bq::::res://Elements/bed_1.tscn<>uid://dnsekkbeo8si1::::res://Elements/microwave.tscn<>uid://bg6belb14dvmh::::res://Elements/wall_general.tscn
 icon.svg::CompressedTexture2D::4690161607792094015::1713433982::1713433982::1::::<><>::
 menu.gd::GDScript::-1::1713433982::0::1::::<>Node2D<>::
-menu.tscn::PackedScene::420064721668977557::1713477320::0::1::::<><>::res://menu.gd<>uid://bkrlkccqpuv28::::res://Sprite/Textures/Bloody Battles.png<>uid://colmbwy5l1los::::res://music/alexander-nakarada-superepic(chosic.com).mp3<>uid://bdpqw61ox6tba::::res://Sprite/Textures/IBMPlexMono-Medium.ttf
-Person 1.tscn::PackedScene::7142461218710085414::1713477320::0::1::::<><>::uid://b53hyvvmh0c13::::res://Sprite/Person 1 Sprites/persona idle Sheet.png<>uid://b7y47m81hf0d::::res://Sprite/Person 1 Sprites/Run_proba.png<>uid://by3giybxvnb7y::::res://sound/byistraya-hodba-po-betonnoy-poverhnosti-26128 (mp3cut.net) (1).mp3
+menu.tscn::PackedScene::420064721668977557::1713538480::0::1::::<><>::res://menu.gd<>uid://bkrlkccqpuv28::::res://Sprite/Textures/Bloody Battles.png<>uid://colmbwy5l1los::::res://music/alexander-nakarada-superepic(chosic.com).mp3<>uid://qwaa8tgw50j6::::res://Sprite/Furniture/IBMPlexMono-Italic.ttf
+Person 1.tscn::PackedScene::7142461218710085414::1713538619::0::1::::<><>::uid://b53hyvvmh0c13::::res://Sprite/Person 1 Sprites/Person idle.png<>uid://b7y47m81hf0d::::res://Sprite/Person 1 Sprites/Person walk.png<>uid://by3giybxvnb7y::::res://sound/byistraya-hodba-po-betonnoy-poverhnosti-26128 (mp3cut.net) (1).mp3
 README.md::TextFile::-1::1713433982::0::1::::<><>::
-scene_1.tscn::PackedScene::3721592055895008683::1713477320::0::1::::<><>::uid://dycvt8b3tmuqb::::res://Teleport1.tscn<>uid://c804j7ocmov0q::::res://Person 1.tscn<>uid://cipp35hq3n5k0::::res://Sprite/Textures/wall textyre 2.png<>uid://bwysdh1h6n3oa::::res://Sprite/Textures/Plitka1 white.png<>uid://ddqn0rr2b75sx::::res://Elements/Door_corridor.tscn
+scene_1.tscn::PackedScene::3721592055895008683::1713538480::0::1::::<><>::uid://dycvt8b3tmuqb::::res://Teleport1.tscn<>uid://c804j7ocmov0q::::res://Person 1.tscn<>uid://cipp35hq3n5k0::::res://Sprite/Textures/wall textyre 2.png<>uid://bwysdh1h6n3oa::::res://Sprite/Textures/Plitka1 white.png<>uid://ddqn0rr2b75sx::::res://Elements/Door_corridor.tscn
 Teleport1.tscn::PackedScene::8849233776945925441::1713433982::0::1::::<><>::
 Test.gd::GDScript::-1::1713433982::0::1::::<>CharacterBody2D<>::
 ::res://Elements/::1713468080
@@ -34,19 +34,20 @@ ForestWalk-320bit(chosic.com).mp3::AudioStreamMP3::3438226311551850458::17134339
 ::res://sound/::1713433982
 byistraya-hodba-po-betonnoy-poverhnosti-26128 (mp3cut.net) (1).mp3::AudioStreamMP3::4129135359606188852::1713433982::1713433982::1::::<><>::
 ::res://Sprite/::1713433982
-::res://Sprite/Furniture/::1713433982
+::res://Sprite/Furniture/::1713531281
 bead room1.png::CompressedTexture2D::5720517281633682887::1713433982::1713433982::1::::<><>::
 bead room2.png::CompressedTexture2D::7433165852107801924::1713433982::1713433982::1::::<><>::
 Door corridor.png::CompressedTexture2D::785353091377312481::1713433982::1713433982::1::::<><>::
+IBMPlexMono-Italic.ttf::FontFile::1168439571722892165::1713527362::1713527362::1::::<><>::
 micriwave.png::CompressedTexture2D::3299182682845889223::1713433982::1713433982::1::::<><>::
 microwave_aseprite-export.png::CompressedTexture2D::8174018172145992843::1713433982::1713433982::1::::<><>::
 sink2.png::CompressedTexture2D::8817466606331166172::1713433982::1713433982::1::::<><>::
 table-Sheet111.png::CompressedTexture2D::3222044592946043016::1713433982::1713433982::1::::<><>::
 Window 1.png::CompressedTexture2D::868129876775828741::1713433982::1713433982::1::::<><>::
-::res://Sprite/Person 1 Sprites/::1713477523
-persona idle Sheet.png::CompressedTexture2D::4550357583937640080::1713433982::1713433982::1::::<><>::
-Peson walkt.png::CompressedTexture2D::8224681138816772904::1713433982::1713433982::1::::<><>::
-Run_proba.png::CompressedTexture2D::137759628436835425::1713477849::1713477851::1::::<><>::
+::res://Sprite/Person 1 Sprites/::1713538619
+Person attac.png::CompressedTexture2D::6974989045078603053::1713537132::1713537605::1::::<><>::
+Person idle.png::CompressedTexture2D::4550357583937640080::1713523122::1713538619::1::::<><>::
+Person walk.png::CompressedTexture2D::137759628436835425::1713477849::1713538595::1::::<><>::
 Skeleton Walk.png::CompressedTexture2D::7798464185116531629::1713433982::1713433982::1::::<><>::
 ::res://Sprite/Sprite Sheets/::1713433982
 Skeleton Attack.png::CompressedTexture2D::4034673392096834930::1713433982::1713433982::1::::<><>::
