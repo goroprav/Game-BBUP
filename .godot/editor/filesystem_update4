@@ -1,4 +1,6 @@
-res://menu.tscn
-res://First room.tscn
+res://dummy.gd
+res://dummy.tscn
 res://Person 1.tscn
+res://First room.tscn
+res://menu.tscn
 res://scene_1.tscn
