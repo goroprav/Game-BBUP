@@ -1,16 +1,17 @@
-[gd_scene load_steps=30 format=3 uid="uid://c804j7ocmov0q"]
+[gd_scene load_steps=30 format=3 uid="uid://darivxv8ugd1q"]
 
-[ext_resource type="Texture2D" uid="uid://b53hyvvmh0c13" path="res://Sprite/Person 1 Sprites/Person idle.png" id="1_0gmvi"]
-[ext_resource type="Texture2D" uid="uid://c6m0bynnnsknl" path="res://Sprite/Person 1 Sprites/Person attac.png" id="1_78o7a"]
-[ext_resource type="Texture2D" uid="uid://b7y47m81hf0d" path="res://Sprite/Person 1 Sprites/Person walk.png" id="2_raa8k"]
-[ext_resource type="AudioStream" uid="uid://by3giybxvnb7y" path="res://sound/byistraya-hodba-po-betonnoy-poverhnosti-26128 (mp3cut.net) (1).mp3" id="3_dx756"]
+[ext_resource type="Texture2D" uid="uid://c6m0bynnnsknl" path="res://Sprite/Person 1 Sprites/Person attac.png" id="1_4yoiw"]
+[ext_resource type="Texture2D" uid="uid://b53hyvvmh0c13" path="res://Sprite/Person 1 Sprites/Person idle.png" id="2_67q46"]
+[ext_resource type="Texture2D" uid="uid://b7y47m81hf0d" path="res://Sprite/Person 1 Sprites/Person walk.png" id="3_xf2y0"]
+[ext_resource type="AudioStream" uid="uid://cwe652y6nwwec" path="res://music/zvuk_-_shagov (mp3cut.net) (1).mp3" id="4_repqq"]
 
 [sub_resource type="GDScript" id="GDScript_42apd"]
 script/source = "extends CharacterBody2D
 
 const SPEED = 300.0
 
-@onready var anim = $AnimatedSprite2D
+@onready var anim = $Player
+@onready var walk_sound = $WalkSound
 var isAttacking = false;
 
 func _physics_process(delta):
@@ -25,8 +26,12 @@ func _physics_process(delta):
 	# Проверяем, двигается ли персонаж, и воспроизводим соответствующую анимацию
 	if (direction_x != 0 or direction_y != 0) && isAttacking==false:
 		anim.play(\"walk\")
+		if not walk_sound.is_playing():
+			walk_sound.play()
 	elif (isAttacking==false):
 		anim.play(\"idle\")
+	else:
+		walk_sound.stop()
 	
 	# Отражаем персонажа по горизонтали в зависимости от направления движения
 	if direction_x==-1:
@@ -34,113 +39,109 @@ func _physics_process(delta):
 	elif direction_x==1:
 		anim.flip_h=false
 	
-	
 	if Input.is_action_just_pressed(\"Attack\"):		
 		isAttacking=true;
 		anim.play(\"Attack\");		
 		await get_tree().create_timer(0.3).timeout
-		$AnimatedSprite2D/Area2D/CollisionShape2D.disabled=false;
+		$Player/Area2D/CollisionShape2D.disabled=false;
 		
-# Передвигаем персонажа
 	move_and_slide()
-
-
 
 func _on_animated_sprite_2d_animation_finished():
 	if anim.animation==\"Attack\":
 		isAttacking=false;
-		$AnimatedSprite2D/Area2D/CollisionShape2D.disabled=true;
+		$Player/Area2D/CollisionShape2D.disabled=true;
 
 func _on_node_2d_body_entered(_body):
 	get_tree().change_scene_to_file(\"res://scene_1.tscn\")
 "
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tvw5l"]
-atlas = ExtResource("1_78o7a")
+atlas = ExtResource("1_4yoiw")
 region = Rect2(0, 0, 184, 137)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jwj21"]
-atlas = ExtResource("1_78o7a")
+atlas = ExtResource("1_4yoiw")
 region = Rect2(184, 0, 184, 137)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_267jh"]
-atlas = ExtResource("1_78o7a")
+atlas = ExtResource("1_4yoiw")
 region = Rect2(368, 0, 184, 137)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hr2vd"]
-atlas = ExtResource("1_78o7a")
+atlas = ExtResource("1_4yoiw")
 region = Rect2(552, 0, 184, 137)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_587cx"]
-atlas = ExtResource("1_0gmvi")
+atlas = ExtResource("2_67q46")
 region = Rect2(0, 0, 100, 100)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_y1ipn"]
-atlas = ExtResource("1_0gmvi")
+atlas = ExtResource("2_67q46")
 region = Rect2(100, 0, 100, 100)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8j3mm"]
-atlas = ExtResource("1_0gmvi")
+atlas = ExtResource("2_67q46")
 region = Rect2(200, 0, 100, 100)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_amhjt"]
-atlas = ExtResource("1_0gmvi")
+atlas = ExtResource("2_67q46")
 region = Rect2(300, 0, 100, 100)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rjgl0"]
-atlas = ExtResource("1_0gmvi")
+atlas = ExtResource("2_67q46")
 region = Rect2(400, 0, 100, 100)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_utay5"]
-atlas = ExtResource("1_0gmvi")
+atlas = ExtResource("2_67q46")
 region = Rect2(500, 0, 100, 100)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mnj8g"]
-atlas = ExtResource("1_0gmvi")
+atlas = ExtResource("2_67q46")
 region = Rect2(600, 0, 100, 100)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pnw0p"]
-atlas = ExtResource("1_0gmvi")
+atlas = ExtResource("2_67q46")
 region = Rect2(700, 0, 100, 100)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_38grc"]
-atlas = ExtResource("1_0gmvi")
+atlas = ExtResource("2_67q46")
 region = Rect2(800, 0, 100, 100)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xl750"]
-atlas = ExtResource("1_0gmvi")
+atlas = ExtResource("2_67q46")
 region = Rect2(900, 0, 100, 100)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cby37"]
-atlas = ExtResource("2_raa8k")
+atlas = ExtResource("3_xf2y0")
 region = Rect2(0, 0, 184, 137)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vmlck"]
-atlas = ExtResource("2_raa8k")
+atlas = ExtResource("3_xf2y0")
 region = Rect2(184, 0, 184, 137)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4pkll"]
-atlas = ExtResource("2_raa8k")
+atlas = ExtResource("3_xf2y0")
 region = Rect2(368, 0, 184, 137)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tjapu"]
-atlas = ExtResource("2_raa8k")
+atlas = ExtResource("3_xf2y0")
 region = Rect2(552, 0, 184, 137)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tvvd4"]
-atlas = ExtResource("2_raa8k")
+atlas = ExtResource("3_xf2y0")
 region = Rect2(736, 0, 184, 137)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_efi0v"]
-atlas = ExtResource("2_raa8k")
+atlas = ExtResource("3_xf2y0")
 region = Rect2(920, 0, 184, 137)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_irdt0"]
-atlas = ExtResource("2_raa8k")
+atlas = ExtResource("3_xf2y0")
 region = Rect2(1104, 0, 184, 137)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yj3jk"]
-atlas = ExtResource("2_raa8k")
+atlas = ExtResource("3_xf2y0")
 region = Rect2(1288, 0, 184, 137)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_wjq7m"]
@@ -235,16 +236,16 @@ collision_layer = 2
 collision_mask = 5
 script = SubResource("GDScript_42apd")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="Player" type="AnimatedSprite2D" parent="."]
 position = Vector2(166, -169)
 scale = Vector2(4.23022, 4.16615)
 sprite_frames = SubResource("SpriteFrames_wjq7m")
-animation = &"Attack"
+animation = &"walk"
 autoplay = "idle"
 
-[node name="Area2D" type="Area2D" parent="AnimatedSprite2D"]
+[node name="Area2D" type="Area2D" parent="Player"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Area2D"]
 position = Vector2(17.4932, -16.8021)
 shape = SubResource("RectangleShape2D_onw4d")
 disabled = true
@@ -263,8 +264,8 @@ scale = Vector2(1.49057, 1)
 polygon = PackedVector2Array(13.4177, -18, 6, 10, 55.0127, 14, 124.785, 11, 117.405, -18)
 
 [node name="WalkSound" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("3_dx756")
+stream = ExtResource("4_repqq")
 volume_db = -10.0
 pitch_scale = 0.85
 
-[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
+[connection signal="animation_finished" from="Player" to="." method="_on_animated_sprite_2d_animation_finished"]

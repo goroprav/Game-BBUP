@@ -1,5 +1,7 @@
 res://First room.tscn
-res://Person 1.tscn
+res://Player.tscn
 res://menu.tscn
 res://scene_1.tscn
 res://dummy.tscn
+res://Mobs/skeleton.tscn
+res://Mobs/skeleton.gd
