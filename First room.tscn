@@ -101,7 +101,7 @@ position = Vector2(1221, 339)
 [node name="Mobs" type="Node2D" parent="."]
 
 [node name="Skeleton" parent="Mobs" instance=ExtResource("13_sifmy")]
-position = Vector2(1310, 492)
+position = Vector2(1232, 472)
 
 [node name="Player" parent="." instance=ExtResource("13_6kn4r")]
-position = Vector2(508, 497)
+position = Vector2(428, 503)

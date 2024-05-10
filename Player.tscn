@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://darivxv8ugd1q"]
+[gd_scene load_steps=29 format=3 uid="uid://darivxv8ugd1q"]
 
 [ext_resource type="Texture2D" uid="uid://c6m0bynnnsknl" path="res://Sprite/Person 1 Sprites/Person attac.png" id="1_4yoiw"]
 [ext_resource type="Texture2D" uid="uid://b53hyvvmh0c13" path="res://Sprite/Person 1 Sprites/Person idle.png" id="2_67q46"]
@@ -43,14 +43,14 @@ func _physics_process(delta):
 		isAttacking=true;
 		anim.play(\"Attack\");		
 		await get_tree().create_timer(0.3).timeout
-		$Player/Area2D/CollisionShape2D.disabled=false;
+		#$CollisionShape2D.disabled=false;
 		
 	move_and_slide()
 
 func _on_animated_sprite_2d_animation_finished():
 	if anim.animation==\"Attack\":
 		isAttacking=false;
-		$Player/Area2D/CollisionShape2D.disabled=true;
+		#$CollisionShape2D.disabled=true;
 
 func _on_node_2d_body_entered(_body):
 	get_tree().change_scene_to_file(\"res://scene_1.tscn\")
@@ -228,27 +228,17 @@ animations = [{
 "speed": 7.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_onw4d"]
-size = Vector2(23.557, 37.044)
-
 [node name="Player" type="CharacterBody2D"]
 collision_layer = 2
 collision_mask = 5
 script = SubResource("GDScript_42apd")
 
 [node name="Player" type="AnimatedSprite2D" parent="."]
-position = Vector2(166, -169)
+position = Vector2(182, -150)
 scale = Vector2(4.23022, 4.16615)
 sprite_frames = SubResource("SpriteFrames_wjq7m")
 animation = &"walk"
 autoplay = "idle"
-
-[node name="Area2D" type="Area2D" parent="Player"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Area2D"]
-position = Vector2(17.4932, -16.8021)
-shape = SubResource("RectangleShape2D_onw4d")
-disabled = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(52, -145)
