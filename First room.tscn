@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://dcar487npruux"]
+[gd_scene load_steps=25 format=3 uid="uid://dcar487npruux"]
 
 [ext_resource type="PackedScene" uid="uid://b8u0l5u633fa" path="res://Elements/left_wall.tscn" id="1_cve1a"]
 [ext_resource type="PackedScene" uid="uid://ddl5gaerky41f" path="res://Elements/floor.tscn" id="1_pmjuy"]
@@ -6,13 +6,14 @@
 [ext_resource type="PackedScene" uid="uid://cx04biwuod1m2" path="res://Elements/table.tscn" id="8_28mnf"]
 [ext_resource type="AudioStream" uid="uid://bo8rc5jvowtmg" path="res://music/ForestWalk-320bit(chosic.com).mp3" id="11_yy2m4"]
 [ext_resource type="PackedScene" uid="uid://ck0xrq5ie43e5" path="res://Elements/bed_2.tscn" id="12_4rphf"]
-[ext_resource type="PackedScene" uid="uid://dycvt8b3tmuqb" path="res://Teleport1.tscn" id="12_6h5rg"]
 [ext_resource type="PackedScene" uid="uid://mhxui6qsry0i" path="res://dummy.tscn" id="12_o82cd"]
 [ext_resource type="PackedScene" uid="uid://darivxv8ugd1q" path="res://Player.tscn" id="13_6kn4r"]
 [ext_resource type="PackedScene" uid="uid://ce6cps0bki4bq" path="res://Elements/bed_1.tscn" id="13_8wdnh"]
 [ext_resource type="PackedScene" uid="uid://dnsekkbeo8si1" path="res://Elements/microwave.tscn" id="13_iew3o"]
 [ext_resource type="PackedScene" uid="uid://bg6belb14dvmh" path="res://Elements/wall_general.tscn" id="13_mkaog"]
 [ext_resource type="PackedScene" uid="uid://c15037ans2lch" path="res://Mobs/skeleton.tscn" id="13_sifmy"]
+[ext_resource type="Texture2D" uid="uid://cipp35hq3n5k0" path="res://Sprite/Textures/wall textyre 2.png" id="14_gwtgj"]
+[ext_resource type="Texture2D" uid="uid://cb327clrih31l" path="res://Sprite/Furniture/Door corridor 2.1.png" id="15_e1cub"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_88ob8"]
 atlas = ExtResource("5_ajlb1")
@@ -50,13 +51,36 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_ylnnx"]
+a = Vector2(78, -77)
+b = Vector2(-17, 12.5)
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_bdme7"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_laoiu"]
+texture = ExtResource("14_gwtgj")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_aa47b"]
+sources/0 = SubResource("TileSetAtlasSource_laoiu")
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_vg1d6"]
+a = Vector2(1754, 647)
+b = Vector2(2354, 50)
+
 [node name="Node2D" type="Node2D"]
 position = Vector2(44, 24)
 
-[node name="leftWall" parent="." instance=ExtResource("1_cve1a")]
-
 [node name="floor" parent="." instance=ExtResource("1_pmjuy")]
 position = Vector2(789, 468)
+
+[node name="wallGeneral" parent="." instance=ExtResource("13_mkaog")]
+show_behind_parent = true
+
+[node name="leftWall" parent="." instance=ExtResource("1_cve1a")]
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
 position = Vector2(142, 188)
@@ -70,25 +94,24 @@ light_mask = 0
 visibility_layer = 2
 position = Vector2(543, 254)
 
-[node name="Teleport" parent="." instance=ExtResource("12_6h5rg")]
-position = Vector2(1634, 506)
+[node name="Teleport" type="Area2D" parent="."]
+position = Vector2(1605, 579)
 scale = Vector2(2, 2)
 collision_layer = 8
 collision_mask = 2
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Teleport"]
+position = Vector2(-5, 2.5)
+shape = SubResource("SegmentShape2D_ylnnx")
+one_way_collision_margin = 27.5
+
 [node name="table" parent="." instance=ExtResource("8_28mnf")]
 position = Vector2(309, 323)
-
-[node name="wallGeneral" parent="." instance=ExtResource("13_mkaog")]
-show_behind_parent = true
 
 [node name="microwave" parent="." instance=ExtResource("13_iew3o")]
 light_mask = 0
 visibility_layer = 2
 position = Vector2(821, 215)
-
-[node name="bed2" parent="." instance=ExtResource("12_4rphf")]
-position = Vector2(231, 520)
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("11_yy2m4")
@@ -99,9 +122,38 @@ autoplay = true
 position = Vector2(1221, 339)
 
 [node name="Mobs" type="Node2D" parent="."]
+visible = false
 
 [node name="Skeleton" parent="Mobs" instance=ExtResource("13_sifmy")]
-position = Vector2(1232, 472)
+position = Vector2(1056, 358)
 
 [node name="Player" parent="." instance=ExtResource("13_6kn4r")]
-position = Vector2(428, 503)
+position = Vector2(517, 429)
+
+[node name="bed2" parent="." instance=ExtResource("12_4rphf")]
+position = Vector2(231, 520)
+
+[node name="centerWall2" type="StaticBody2D" parent="."]
+position = Vector2(-402, 191)
+physics_material_override = SubResource("PhysicsMaterial_bdme7")
+
+[node name="centerWall" type="TileMap" parent="centerWall2"]
+modulate = Color(1, 1, 1, 0.694118)
+position = Vector2(1531, 657)
+rotation = 1.5708
+scale = Vector2(5, 5)
+skew = -0.785398
+tile_set = SubResource("TileSet_aa47b")
+format = 2
+layer_0/tile_data = PackedInt32Array(-327679, 0, 0, -327678, 65536, 0, -458751, 0, 0, -393215, 0, 1, -458750, 65536, 0, -393214, 65536, 1, -589823, 65536, 0, -524287, 65536, 1, -589822, 65536, 0, -524286, 65536, 1, -720895, 65536, 0, -655359, 65536, 1, -720894, 65536, 0, -655358, 65536, 1, -851967, 65536, 0, -786431, 65536, 1, -851966, 65536, 0, -786430, 65536, 1, -983039, 0, 0, -917503, 0, 1, -983038, 65536, 0, -917502, 65536, 1, 262146, 65536, 1, -262145, 65536, 0, -327680, 65536, 0, -393217, 65536, 0, -327681, 65536, 1, -458752, 65536, 0, -393216, 65536, 1, -524289, 65536, 0, -458753, 65536, 1, -589824, 0, 0, -524288, 0, 1, -655361, 65536, 0, -589825, 65536, 1, -720896, 0, 0, -655360, 0, 1, -720897, 65536, 1, -851968, 65536, 1, -786432, 0, 1, -917505, 65536, 0, -851969, 0, 0, -983040, 65536, 0, -917504, 65536, 0, -786433, 0, 1)
+
+[node name="DoorCorridor2_1" type="Sprite2D" parent="centerWall2"]
+position = Vector2(2102, 162)
+scale = Vector2(6.46, 5.71375)
+texture = ExtResource("15_e1cub")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="centerWall2"]
+position = Vector2(-7, -2)
+shape = SubResource("SegmentShape2D_vg1d6")
+one_way_collision_margin = 31.8
+debug_color = Color(0.730813, 0.466078, 0.222322, 0.42)

@@ -4,4 +4,7 @@ res://menu.tscn
 res://scene_1.tscn
 res://dummy.tscn
 res://Mobs/skeleton.tscn
-res://Mobs/skeleton.gd
+res://Teleport1.tscn
+res://Elements/floor.tscn
+res://Elements/wall_general.tscn
+res://Elements/left_wall.tscn

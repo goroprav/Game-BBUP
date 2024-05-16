@@ -1,8 +1,8 @@
 [gd_scene load_steps=2 format=3 uid="uid://dycvt8b3tmuqb"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_ylnnx"]
-a = Vector2(279, -275)
-b = Vector2(-316, 315)
+a = Vector2(78, -77)
+b = Vector2(-17, 12.5)
 
 [node name="Teleport" type="Area2D"]
 
