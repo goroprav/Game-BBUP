@@ -83,9 +83,8 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="SegmentShape2D" id="SegmentShape2D_ylnnx"]
-a = Vector2(78, -77)
-b = Vector2(-17, 12.5)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jdd6t"]
+size = Vector2(71.0437, 18.2265)
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_bdme7"]
 
@@ -147,8 +146,10 @@ collision_layer = 8
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Teleport"]
-position = Vector2(-5, 2.5)
-shape = SubResource("SegmentShape2D_ylnnx")
+position = Vector2(45, -58)
+rotation = -0.834353
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_jdd6t")
 one_way_collision_margin = 27.5
 
 [node name="table" parent="." instance=ExtResource("8_28mnf")]
@@ -203,3 +204,5 @@ position = Vector2(-7, -2)
 shape = SubResource("SegmentShape2D_vg1d6")
 one_way_collision_margin = 31.8
 debug_color = Color(0.730813, 0.466078, 0.222322, 0.42)
+
+[connection signal="body_entered" from="Teleport" to="Player" method="_on_teleport_body_entered"]

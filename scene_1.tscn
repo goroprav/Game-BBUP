@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://bta1cvrjn6orj"]
+[gd_scene load_steps=21 format=3 uid="uid://bta1cvrjn6orj"]
 
 [ext_resource type="PackedScene" uid="uid://dycvt8b3tmuqb" path="res://Teleport1.tscn" id="2_4qyeo"]
 [ext_resource type="PackedScene" uid="uid://c804j7ocmov0q" path="res://Person 1.tscn" id="2_dk75y"]
@@ -10,6 +10,9 @@
 [ext_resource type="Texture2D" uid="uid://davvdb4ixt1mn" path="res://Sprite/Furniture/nightstand.png" id="7_wnjsg"]
 [ext_resource type="Texture2D" uid="uid://d3vogy08mnh8l" path="res://Sprite/Furniture/Door corridor 2.png" id="8_nl33h"]
 [ext_resource type="Texture2D" uid="uid://cg2yx4li4ygem" path="res://Sprite/Furniture/Door for kitchen.png" id="9_q7l0j"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0b4uy"]
+size = Vector2(37.998, 253.967)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6yy5g"]
 texture = ExtResource("3_n6hpd")
@@ -61,9 +64,13 @@ sources/1 = SubResource("TileSetAtlasSource_q8am8")
 
 [node name="Scene_1" type="Node2D"]
 
-[node name="Teleport" parent="." instance=ExtResource("2_4qyeo")]
-position = Vector2(397, 376)
-rotation = -1.5708
+[node name="TeleportToFirstRoom" parent="." instance=ExtResource("2_4qyeo")]
+position = Vector2(435, 689)
+rotation = -0.840184
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="TeleportToFirstRoom"]
+position = Vector2(8.99899, 40.3834)
+shape = SubResource("RectangleShape2D_0b4uy")
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(905.97, 548.97)
@@ -170,3 +177,5 @@ layer_0/tile_data = PackedInt32Array(-196607, 1, 0, -131071, 1, 1, -65535, 1, 0,
 position = Vector2(845, 364)
 scale = Vector2(5.5925, 5.5925)
 texture = ExtResource("8_nl33h")
+
+[connection signal="body_entered" from="TeleportToFirstRoom" to="Test" method="_on_teleport_to_first_room_body_entered"]

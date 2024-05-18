@@ -51,8 +51,11 @@ func _on_animated_sprite_2d_animation_finished():
 		isAttacking=false;
 		$AnimatedSprite2D/Area2D/CollisionShape2D.disabled=true;
 
-func _on_node_2d_body_entered(_body):
-	get_tree().change_scene_to_file(\"res://scene_1.tscn\")
+
+
+func _on_teleport_to_first_room_body_entered(body):
+	print('1')
+	get_tree().change_scene_to_file(\"res://First room.tscn\")
 "
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tvw5l"]
