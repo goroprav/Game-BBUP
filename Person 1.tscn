@@ -239,7 +239,7 @@ script = SubResource("GDScript_42apd")
 position = Vector2(166, -169)
 scale = Vector2(4.23022, 4.16615)
 sprite_frames = SubResource("SpriteFrames_wjq7m")
-animation = &"Attack"
+animation = &"walk"
 autoplay = "idle"
 
 [node name="Area2D" type="Area2D" parent="AnimatedSprite2D"]

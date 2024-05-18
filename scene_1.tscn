@@ -152,10 +152,9 @@ texture = ExtResource("9_q7l0j")
 
 [node name="Test" parent="." instance=ExtResource("2_dk75y")]
 position = Vector2(406, 181)
-scale = Vector2(1, 1)
 
 [node name="centerWall2" type="StaticBody2D" parent="."]
-position = Vector2(-380, 162)
+position = Vector2(-375, 172)
 
 [node name="centerWall" type="TileMap" parent="centerWall2"]
 modulate = Color(1, 1, 1, 0.694118)

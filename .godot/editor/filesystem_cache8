@@ -1,29 +1,31 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1715897391
+::res://::1715991570
 AnimatedSprite2D.gd::GDScript::-1::1715893295::0::1::::<>AnimatedSprite2D<>::
 default_bus_layout.tres::AudioBusLayout::855461507302038552::1715893295::0::1::::<><>::
 dummy.gd::GDScript::-1::1715893295::0::1::::<>Area2D<>::
-dummy.tscn::PackedScene::858149443473989282::1715897391::0::1::::<><>::uid://duontdkvauqxf::::res://Enemy/dummy/dummy.png<>res://dummy.gd
+dummy.tscn::PackedScene::858149443473989282::1715991570::0::1::::<><>::uid://duontdkvauqxf::::res://Enemy/dummy/dummy.png<>res://dummy.gd
 export_presets.cfg::TextFile::-1::1715893295::0::1::::<><>::
-First room.tscn::PackedScene::7300725498571333415::1715897391::0::1::::<><>::uid://b8u0l5u633fa::::res://Elements/left_wall.tscn<>uid://ddl5gaerky41f::::res://Elements/floor.tscn<>uid://mmr8b5y2u2f6::::res://Sprite/Furniture/Window 1.png<>uid://cx04biwuod1m2::::res://Elements/table.tscn<>uid://bo8rc5jvowtmg::::res://music/ForestWalk-320bit(chosic.com).mp3<>uid://ck0xrq5ie43e5::::res://Elements/bed_2.tscn<>uid://dycvt8b3tmuqb::::res://Teleport1.tscn<>uid://mhxui6qsry0i::::res://dummy.tscn<>uid://darivxv8ugd1q::::res://Player.tscn<>uid://ce6cps0bki4bq::::res://Elements/bed_1.tscn<>uid://dnsekkbeo8si1::::res://Elements/microwave.tscn<>uid://bg6belb14dvmh::::res://Elements/wall_general.tscn<>uid://c15037ans2lch::::res://Mobs/skeleton.tscn
+First room.tscn::PackedScene::7300725498571333415::1715991570::0::1::::<><>::uid://coe1adlr8jo1x::::res://Sprite/Textures/gender.png<>uid://b8u0l5u633fa::::res://Elements/left_wall.tscn<>uid://buhechghhl04k::::res://Sprite/Textures/gender black.png<>uid://bwysdh1h6n3oa::::res://Sprite/Textures/Plitka1 white.png<>uid://mmr8b5y2u2f6::::res://Sprite/Furniture/Window 1.png<>uid://cx04biwuod1m2::::res://Elements/table.tscn<>uid://bo8rc5jvowtmg::::res://music/ForestWalk-320bit(chosic.com).mp3<>uid://ck0xrq5ie43e5::::res://Elements/bed_2.tscn<>uid://mhxui6qsry0i::::res://dummy.tscn<>uid://darivxv8ugd1q::::res://Player.tscn<>uid://ce6cps0bki4bq::::res://Elements/bed_1.tscn<>uid://dnsekkbeo8si1::::res://Elements/microwave.tscn<>uid://bg6belb14dvmh::::res://Elements/wall_general.tscn<>uid://c15037ans2lch::::res://Mobs/skeleton.tscn<>uid://cipp35hq3n5k0::::res://Sprite/Textures/wall textyre 2.png<>uid://cb327clrih31l::::res://Sprite/Furniture/Door corridor 2.1.png
 icon.svg::CompressedTexture2D::4690161607792094015::1715893296::1715894066::1::::<><>::
 menu.gd::GDScript::-1::1715893296::0::1::::<>Node2D<>::
-menu.tscn::PackedScene::420064721668977557::1715897391::0::1::::<><>::res://menu.gd<>uid://bkrlkccqpuv28::::res://Sprite/Textures/Bloody Battles.png<>uid://colmbwy5l1los::::res://music/alexander-nakarada-superepic(chosic.com).mp3<>uid://qwaa8tgw50j6::::res://Sprite/Furniture/IBMPlexMono-Italic.ttf
-Person 1.tscn::PackedScene::7142461218710085414::1715893295::0::1::::<><>::uid://b53hyvvmh0c13::::res://Sprite/Person 1 Sprites/Person idle.png<>uid://c6m0bynnnsknl::::res://Sprite/Person 1 Sprites/Person attac.png<>uid://b7y47m81hf0d::::res://Sprite/Person 1 Sprites/Person walk.png<>uid://by3giybxvnb7y::::res://sound/byistraya-hodba-po-betonnoy-poverhnosti-26128 (mp3cut.net) (1).mp3
-Player.tscn::PackedScene::7194880952516735840::1715897391::0::1::::<><>::uid://c6m0bynnnsknl::::res://Sprite/Person 1 Sprites/Person attac.png<>uid://b53hyvvmh0c13::::res://Sprite/Person 1 Sprites/Person idle.png<>uid://b7y47m81hf0d::::res://Sprite/Person 1 Sprites/Person walk.png<>uid://cwe652y6nwwec::::res://music/zvuk_-_shagov (mp3cut.net) (1).mp3
+menu.tscn::PackedScene::420064721668977557::1715952215::0::1::::<><>::res://menu.gd<>uid://bkrlkccqpuv28::::res://Sprite/Textures/Bloody Battles.png<>uid://colmbwy5l1los::::res://music/alexander-nakarada-superepic(chosic.com).mp3<>uid://qwaa8tgw50j6::::res://Sprite/Furniture/IBMPlexMono-Italic.ttf
+Person 1.tscn::PackedScene::7142461218710085414::1715991570::0::1::::<><>::uid://b53hyvvmh0c13::::res://Sprite/Person 1 Sprites/Person idle.png<>uid://c6m0bynnnsknl::::res://Sprite/Person 1 Sprites/Person attac.png<>uid://b7y47m81hf0d::::res://Sprite/Person 1 Sprites/Person walk.png<>uid://by3giybxvnb7y::::res://sound/byistraya-hodba-po-betonnoy-poverhnosti-26128 (mp3cut.net) (1).mp3
+Player.tscn::PackedScene::7194880952516735840::1715991570::0::1::::<><>::uid://c6m0bynnnsknl::::res://Sprite/Person 1 Sprites/Person attac.png<>uid://b53hyvvmh0c13::::res://Sprite/Person 1 Sprites/Person idle.png<>uid://b7y47m81hf0d::::res://Sprite/Person 1 Sprites/Person walk.png<>uid://cwe652y6nwwec::::res://music/zvuk_-_shagov (mp3cut.net) (1).mp3
 README.md::TextFile::-1::1715893295::0::1::::<><>::
-scene_1.tscn::PackedScene::3721592055895008683::1715897391::0::1::::<><>::uid://dycvt8b3tmuqb::::res://Teleport1.tscn<>uid://c804j7ocmov0q::::res://Person 1.tscn<>uid://cipp35hq3n5k0::::res://Sprite/Textures/wall textyre 2.png<>uid://bwysdh1h6n3oa::::res://Sprite/Textures/Plitka1 white.png<>uid://coe1adlr8jo1x::::res://Sprite/Textures/gender.png<>uid://ddqn0rr2b75sx::::res://Elements/Door_corridor.tscn<>uid://df72jodwxi354::::res://Sprite/Furniture/rack.png<>uid://davvdb4ixt1mn::::res://Sprite/Furniture/nightstand.png<>uid://d3vogy08mnh8l::::res://Sprite/Furniture/Door corridor 2.png<>uid://cg2yx4li4ygem::::res://Sprite/Furniture/Door for kitchen.png
-Teleport1.tscn::PackedScene::8849233776945925441::1715897391::0::1::::<><>::
+Kitchen.tscn::PackedScene::4074159150341817897::1715991570::0::1::::<><>::uid://cfb6hlq702n8m::::res://Sprite/Textures/floor kitchen.png<>uid://dwk4g8m3hp1ar::::res://Sprite/Textures/wall textyre 1.png<>uid://darivxv8ugd1q::::res://Player.tscn<>uid://cipp35hq3n5k0::::res://Sprite/Textures/wall textyre 2.png
+scene_1.tscn::PackedScene::3721592055895008683::1715991570::0::1::::<><>::uid://dycvt8b3tmuqb::::res://Teleport1.tscn<>uid://c804j7ocmov0q::::res://Person 1.tscn<>uid://cipp35hq3n5k0::::res://Sprite/Textures/wall textyre 2.png<>uid://bwysdh1h6n3oa::::res://Sprite/Textures/Plitka1 white.png<>uid://coe1adlr8jo1x::::res://Sprite/Textures/gender.png<>uid://ddqn0rr2b75sx::::res://Elements/Door_corridor.tscn<>uid://df72jodwxi354::::res://Sprite/Furniture/rack.png<>uid://davvdb4ixt1mn::::res://Sprite/Furniture/nightstand.png<>uid://d3vogy08mnh8l::::res://Sprite/Furniture/Door corridor 2.png<>uid://cg2yx4li4ygem::::res://Sprite/Furniture/Door for kitchen.png
+Teleport1.tscn::PackedScene::8849233776945925441::1715991570::0::1::::<><>::
 Test.gd::GDScript::-1::1715893295::0::1::::<>CharacterBody2D<>::
-::res://Elements/::1715897755
+::res://Elements/::1715952216
 bed_1.tscn::PackedScene::5117741657307850854::1715893295::0::1::::<><>::uid://cnrcc36wn0wgl::::res://Sprite/Furniture/bead room1.png
 bed_2.tscn::PackedScene::5527766984035768126::1715893295::0::1::::<><>::uid://dd5xfj4d7xcoi::::res://Sprite/Furniture/bead room2.png
+center_wall_2.tscn::PackedScene::3449409759304569455::1715898531::0::1::::<><>::uid://cipp35hq3n5k0::::res://Sprite/Textures/wall textyre 2.png<>uid://cb327clrih31l::::res://Sprite/Furniture/Door corridor 2.1.png
 Door_corridor.tscn::PackedScene::7403693512199956515::1715893295::0::1::::<><>::uid://lgowegcmvabx::::res://Sprite/Furniture/Door corridor.png
-floor.tscn::PackedScene::7394368968800442093::1715897755::0::1::::<><>::uid://coe1adlr8jo1x::::res://Sprite/Textures/gender.png<>uid://buhechghhl04k::::res://Sprite/Textures/gender black.png<>uid://bwysdh1h6n3oa::::res://Sprite/Textures/Plitka1 white.png
-left_wall.tscn::PackedScene::139572919277208682::1715893295::0::1::::<><>::uid://dwk4g8m3hp1ar::::res://Sprite/Textures/wall textyre 1.png<>uid://cipp35hq3n5k0::::res://Sprite/Textures/wall textyre 2.png
+floor.tscn::PackedScene::7394368968800442093::1715952216::0::1::::<><>::uid://coe1adlr8jo1x::::res://Sprite/Textures/gender.png<>uid://buhechghhl04k::::res://Sprite/Textures/gender black.png<>uid://bwysdh1h6n3oa::::res://Sprite/Textures/Plitka1 white.png
+left_wall.tscn::PackedScene::139572919277208682::1715952216::0::1::::<><>::uid://dwk4g8m3hp1ar::::res://Sprite/Textures/wall textyre 1.png<>uid://cipp35hq3n5k0::::res://Sprite/Textures/wall textyre 2.png
 microwave.tscn::PackedScene::8109137070836989338::1715893295::0::1::::<><>::uid://bnafb6vjugbhf::::res://Sprite/Furniture/micriwave.png
 table.tscn::PackedScene::6440557248596637587::1715893295::0::1::::<><>::uid://bl51ur4182eaq::::res://Sprite/Furniture/table-Sheet111.png<>res://AnimatedSprite2D.gd
-wall_general.tscn::PackedScene::2871617896587407835::1715893295::0::1::::<><>::uid://dwk4g8m3hp1ar::::res://Sprite/Textures/wall textyre 1.png
+wall_general.tscn::PackedScene::2871617896587407835::1715952216::0::1::::<><>::uid://dwk4g8m3hp1ar::::res://Sprite/Textures/wall textyre 1.png
 ::res://Enemy/::1715893295
 ::res://Enemy/dummy/::1715893295
 dummy.png::CompressedTexture2D::8592763637359988627::1715893295::1715893295::1::::<><>::
@@ -41,9 +43,9 @@ THIRDPARTY.md::TextFile::-1::1715893295::0::1::::<><>::
 ::res://godot-git-plugin/linux/::1715893295
 ::res://godot-git-plugin/macos/::1715893296
 ::res://godot-git-plugin/win64/::1715893296
-::res://Mobs/::1715897391
+::res://Mobs/::1715991570
 skeleton.gd::GDScript::-1::1715893626::0::1::::<>CharacterBody2D<>::
-skeleton.tscn::PackedScene::6661252243008329231::1715897391::0::1::::<><>::res://Mobs/skeleton.gd<>uid://b7j3jpic7cyrg::::res://Enemy/Skeleton/Death.png<>uid://4so4rlvipus5::::res://Enemy/Skeleton/Walk.png<>uid://drwj2h6nkrbnn::::res://Enemy/Skeleton/Idle.png
+skeleton.tscn::PackedScene::6661252243008329231::1715991570::0::1::::<><>::res://Mobs/skeleton.gd<>uid://b7j3jpic7cyrg::::res://Enemy/Skeleton/Death.png<>uid://4so4rlvipus5::::res://Enemy/Skeleton/Walk.png<>uid://drwj2h6nkrbnn::::res://Enemy/Skeleton/Idle.png
 ::res://music/::1715893296
 alexander-nakarada-superepic(chosic.com).mp3::AudioStreamMP3::5778924917288222170::1715893296::1715893296::1::::<><>::
 ForestWalk-320bit(chosic.com).mp3::AudioStreamMP3::3438226311551850458::1715893296::1715893296::1::::<><>::
@@ -51,9 +53,10 @@ zvuk_-_shagov (mp3cut.net) (1).mp3::AudioStreamMP3::6327190695664581570::1715893
 ::res://sound/::1715893296
 byistraya-hodba-po-betonnoy-poverhnosti-26128 (mp3cut.net) (1).mp3::AudioStreamMP3::4129135359606188852::1715893296::1715893296::1::::<><>::
 ::res://Sprite/::1715893295
-::res://Sprite/Furniture/::1715897936
+::res://Sprite/Furniture/::1715992202
 bead room1.png::CompressedTexture2D::5720517281633682887::1715893295::1715893295::1::::<><>::
 bead room2.png::CompressedTexture2D::7433165852107801924::1715893295::1715893295::1::::<><>::
+dinner_table.png::CompressedTexture2D::5090956407437467251::1715991796::1715991797::1::::<><>::
 Door corridor 2.1.png::CompressedTexture2D::4902529415170509575::1715897936::1715897938::1::::<><>::
 Door corridor 2.png::CompressedTexture2D::9168763659138064145::1715896373::1715896375::1::::<><>::
 Door corridor.png::CompressedTexture2D::785353091377312481::1715893295::1715893295::1::::<><>::
@@ -66,6 +69,7 @@ rack.png::CompressedTexture2D::7577922529341194681::1715895694::1715895757::1:::
 sink2.png::CompressedTexture2D::8817466606331166172::1715893295::1715893295::1::::<><>::
 table-Sheet111.png::CompressedTexture2D::3222044592946043016::1715893295::1715893295::1::::<><>::
 Window 1.png::CompressedTexture2D::868129876775828741::1715893295::1715893295::1::::<><>::
+Window kitchen.png::CompressedTexture2D::6358813151422726084::1715992202::1715992204::1::::<><>::
 ::res://Sprite/Person 1 Sprites/::1715893295
 Person attac.png::CompressedTexture2D::6974989045078603053::1715893295::1715893295::1::::<><>::
 Person idle.png::CompressedTexture2D::4550357583937640080::1715893295::1715893295::1::::<><>::
@@ -78,8 +82,10 @@ Skeleton Hit.png::CompressedTexture2D::5751046179890260212::1715893295::17158932
 Skeleton Idle.png::CompressedTexture2D::2691296825714470494::1715893295::1715893295::1::::<><>::
 Skeleton React.png::CompressedTexture2D::2065231945459315279::1715893295::1715893295::1::::<><>::
 Skeleton Walk.png::CompressedTexture2D::1184983243592315464::1715893295::1715893295::1::::<><>::
-::res://Sprite/Textures/::1715893295
+::res://Sprite/Textures/::1715991952
 Bloody Battles.png::CompressedTexture2D::3124089395636053403::1715893295::1715893295::1::::<><>::
+floor kitchen.png::CompressedTexture2D::5127745294625660042::1715990634::1715990637::1::::<><>::
+floor kitchen_2.png::CompressedTexture2D::2072468818113894780::1715991951::1715991952::1::::<><>::
 gender black.png::CompressedTexture2D::3804895017551184880::1715893295::1715893295::1::::<><>::
 gender.png::CompressedTexture2D::5765321506526593787::1715893295::1715893295::1::::<><>::
 IBMPlexMono-Medium.ttf::FontFile::2628965309325107350::1715893295::1715893295::1::::<><>::

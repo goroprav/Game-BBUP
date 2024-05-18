@@ -1,7 +1,9 @@
-[gd_scene load_steps=25 format=3 uid="uid://dcar487npruux"]
+[gd_scene load_steps=32 format=3 uid="uid://dcar487npruux"]
 
+[ext_resource type="Texture2D" uid="uid://coe1adlr8jo1x" path="res://Sprite/Textures/gender.png" id="1_0tq2i"]
 [ext_resource type="PackedScene" uid="uid://b8u0l5u633fa" path="res://Elements/left_wall.tscn" id="1_cve1a"]
-[ext_resource type="PackedScene" uid="uid://ddl5gaerky41f" path="res://Elements/floor.tscn" id="1_pmjuy"]
+[ext_resource type="Texture2D" uid="uid://buhechghhl04k" path="res://Sprite/Textures/gender black.png" id="2_3r3kj"]
+[ext_resource type="Texture2D" uid="uid://bwysdh1h6n3oa" path="res://Sprite/Textures/Plitka1 white.png" id="3_i348q"]
 [ext_resource type="Texture2D" uid="uid://mmr8b5y2u2f6" path="res://Sprite/Furniture/Window 1.png" id="5_ajlb1"]
 [ext_resource type="PackedScene" uid="uid://cx04biwuod1m2" path="res://Elements/table.tscn" id="8_28mnf"]
 [ext_resource type="AudioStream" uid="uid://bo8rc5jvowtmg" path="res://music/ForestWalk-320bit(chosic.com).mp3" id="11_yy2m4"]
@@ -14,6 +16,36 @@
 [ext_resource type="PackedScene" uid="uid://c15037ans2lch" path="res://Mobs/skeleton.tscn" id="13_sifmy"]
 [ext_resource type="Texture2D" uid="uid://cipp35hq3n5k0" path="res://Sprite/Textures/wall textyre 2.png" id="14_gwtgj"]
 [ext_resource type="Texture2D" uid="uid://cb327clrih31l" path="res://Sprite/Furniture/Door corridor 2.1.png" id="15_e1cub"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2dfyb"]
+texture = ExtResource("1_0tq2i")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1kr6y"]
+texture = ExtResource("2_3r3kj")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_eqpht"]
+texture = ExtResource("3_i348q")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_nh8os"]
+sources/0 = SubResource("TileSetAtlasSource_2dfyb")
+sources/1 = SubResource("TileSetAtlasSource_1kr6y")
+sources/2 = SubResource("TileSetAtlasSource_eqpht")
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_5m30t"]
+a = Vector2(496.5, -52.5)
+b = Vector2(-1122.5, -61.5)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_88ob8"]
 atlas = ExtResource("5_ajlb1")
@@ -74,8 +106,22 @@ b = Vector2(2354, 50)
 [node name="Node2D" type="Node2D"]
 position = Vector2(44, 24)
 
-[node name="floor" parent="." instance=ExtResource("1_pmjuy")]
+[node name="floor" type="StaticBody2D" parent="."]
 position = Vector2(789, 468)
+collision_mask = 6
+
+[node name="Pol" type="TileMap" parent="floor"]
+visibility_layer = 8
+texture_filter = 1
+scale = Vector2(5, 5)
+skew = 0.785398
+tile_set = SubResource("TileSet_nh8os")
+format = 2
+layer_0/tile_data = PackedInt32Array(196606, 0, 0, 131070, 0, 0, 65534, 0, 0, -2, 0, 0, -65538, 0, 0, -131074, 1, 0, 262141, 0, 0, 262137, 0, 0, 262138, 0, 0, 262139, 0, 0, 262140, 0, 0, 262142, 0, 0, 262143, 0, 0, 196608, 0, 0, 196609, 0, 0, 262145, 0, 0, 262146, 0, 0, 196610, 0, 0, 196611, 0, 0, 196612, 0, 0, 196613, 0, 0, 131077, 0, 0, 131076, 0, 0, 65540, 0, 1, 65539, 65536, 1, 65538, 0, 1, 2, 0, 0, 1, 65536, 0, 0, 0, 0, 65535, 0, 0, 131071, 0, 0, 65536, 0, 1, 131072, 0, 0, 131073, 0, 0, 131069, 1, 0, 131068, 1, 0, 131067, 1, 0, 131066, 1, 0, 131065, 1, 0, 131064, 1, 0, 65528, 1, 0, -8, 1, 0, -65544, 1, 0, -131080, 1, 0, -196616, 1, 0, -131079, 1, 0, -131078, 1, 0, -65542, 1, 0, -65541, 0, 0, -65540, 0, 0, -65539, 0, 0, -3, 0, 0, -4, 65536, 0, -65543, 1, 0, -131077, 1, 0, -131076, 1, 0, -131075, 1, 0, -131073, 1, 0, -196608, 0, 1, -196607, 65536, 1, -131071, 0, 0, -131070, 0, 0, -131069, 65536, 0, -65533, 65536, 1, -65532, 0, 1, 4, 0, 0, -65534, 0, 1, -131072, 0, 0, -65537, 0, 0, 131074, 0, 0, 131075, 0, 0, -65535, 0, 0, -65536, 0, 0, 196607, 0, 0, 196605, 1, 0, 65533, 0, 0, 65532, 65536, 1, -1, 0, 0, 196602, 1, 0, 196603, 1, 0, 196604, 1, 0, -196615, 1, 0, -196614, 1, 0, -196613, 1, 0, -196612, 1, 0, -196610, 1, 0, -196611, 1, 0, -196609, 1, 0, -262143, 65536, 0, 327673, 0, 0, 327674, 0, 0, 327675, 0, 0, 327676, 0, 0, 327677, 0, 0, 327678, 0, 0, 327679, 0, 0, 262144, 0, 0, 262147, 0, 0, 262148, 0, 0, 262149, 0, 0, 5, 65536, 0, -65531, 65536, 1, -131067, 65536, 0, -262139, 0, 0, -262141, 65536, 0, 131078, 0, 0, 262152, 0, 0, 196615, 0, 0, 131079, 0, 0, 131080, 0, 0, 131081, 0, 0, 131082, 0, 0, 65545, 65536, 1, 65544, 0, 1, 8, 0, 0, 7, 65536, 0, 6, 0, 0, -65528, 0, 1, -65527, 65536, 1, -65526, 0, 0, -131062, 0, 0, -131063, 65536, 0, -196599, 0, 0, -196600, 0, 0, -131065, 65536, 0, -196601, 0, 0, -262137, 0, 0, -262138, 65536, 0, -262136, 0, 0, -262135, 0, 0, -262134, 0, 0, -196598, 0, 0, -131061, 0, 0, -65525, 0, 1, 11, 0, 0, 65547, 0, 1, 131083, 65536, 0, 131084, 2, 1, 196620, 2, 0, 262156, 2, 1, 196619, 65536, 1, 262155, 0, 0, 262154, 65536, 1, 196618, 65536, 0, 196617, 0, 0, 196616, 0, 0, 196614, 0, 0, 262150, 0, 0, 262151, 0, 0, 131085, 65538, 1, 131086, 2, 1, 65550, 2, 0, 65549, 65538, 0, 13, 65538, 1, -262132, 2, 1, -262131, 65538, 1, -262130, 2, 1, -196594, 2, 0, -196595, 65538, 0, -131058, 2, 1, -65522, 2, 0, -65523, 65538, 0, -131059, 65538, 1, 196622, 2, 0, 262158, 2, 1, -6, 1, 0, 262136, 0, 0, 327672, 0, 0, 65530, 1, 0, 65529, 1, 0, 196600, 1, 0, 196601, 1, 0, -7, 1, 0, 65542, 0, 1, 65543, 65536, 1, 65541, 65536, 1, 3, 65536, 0, 65537, 65536, 1, -131068, 0, 0, -131066, 0, 0, -65530, 0, 1, -65529, 65536, 1, -131064, 0, 0, 9, 65536, 0, 10, 0, 0, 65546, 0, 1, 262153, 0, 1, 196621, 65538, 0, 262157, 65538, 1, 14, 2, 1, -262133, 0, 0, -196597, 0, 1, -196596, 2, 0, -131060, 2, 1, -65524, 2, 0, 12, 2, 1, 65548, 2, 0, -262140, 0, 0, -196604, 0, 1, -196603, 0, 1, -196602, 65536, 1, -262142, 0, 0, -196606, 0, 1, -196605, 65536, 1, -262144, 0, 0, -5, 0, 0, 65531, 0, 1, 196623, 65538, 0, 262159, 65538, 1, 65551, 65538, 0, 131087, 65538, 1, -65521, 65538, 0, 15, 65538, 1, -196593, 65538, 0, -131057, 65538, 1, -262129, 65538, 1, 196624, 2, 0, 262160, 2, 1, 196625, 65538, 0, 262161, 65538, 1, 65552, 2, 0, 131088, 2, 1, 65553, 65538, 0, 131089, 65538, 1, -65520, 2, 0, 16, 2, 1, -65519, 65538, 0, 17, 65538, 1, -196592, 2, 0, -131056, 2, 1, -196591, 65538, 0, -131055, 65538, 1, -262128, 2, 1, -262127, 65538, 1, 196626, 2, 0, 262162, 2, 1, 196627, 65538, 0, 262163, 65538, 1, 65554, 2, 0, 131090, 2, 1, 65555, 65538, 0, 131091, 65538, 1, -65518, 2, 0, 18, 2, 1, -65517, 65538, 0, 19, 65538, 1, -196590, 2, 0, -131054, 2, 1, -196589, 65538, 0, -131053, 65538, 1, -262126, 2, 1, -262125, 65538, 1, 196628, 2, 0, 262164, 2, 1, 196629, 65538, 0, 262165, 65538, 1, 65556, 2, 0, 131092, 2, 1, 65557, 65538, 0, 131093, 65538, 1, -65516, 2, 0, 20, 2, 1, -65515, 65538, 0, 21, 65538, 1, -196588, 2, 0, -131052, 2, 1, -196587, 65538, 0, -131051, 65538, 1, -262124, 2, 1, -262123, 65538, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor"]
+position = Vector2(312.5, 215.5)
+shape = SubResource("SegmentShape2D_5m30t")
 
 [node name="wallGeneral" parent="." instance=ExtResource("13_mkaog")]
 show_behind_parent = true
@@ -119,10 +165,10 @@ volume_db = -25.0
 autoplay = true
 
 [node name="Area2D" parent="." instance=ExtResource("12_o82cd")]
+visible = false
 position = Vector2(1221, 339)
 
 [node name="Mobs" type="Node2D" parent="."]
-visible = false
 
 [node name="Skeleton" parent="Mobs" instance=ExtResource("13_sifmy")]
 position = Vector2(1056, 358)
@@ -148,7 +194,7 @@ format = 2
 layer_0/tile_data = PackedInt32Array(-327679, 0, 0, -327678, 65536, 0, -458751, 0, 0, -393215, 0, 1, -458750, 65536, 0, -393214, 65536, 1, -589823, 65536, 0, -524287, 65536, 1, -589822, 65536, 0, -524286, 65536, 1, -720895, 65536, 0, -655359, 65536, 1, -720894, 65536, 0, -655358, 65536, 1, -851967, 65536, 0, -786431, 65536, 1, -851966, 65536, 0, -786430, 65536, 1, -983039, 0, 0, -917503, 0, 1, -983038, 65536, 0, -917502, 65536, 1, 262146, 65536, 1, -262145, 65536, 0, -327680, 65536, 0, -393217, 65536, 0, -327681, 65536, 1, -458752, 65536, 0, -393216, 65536, 1, -524289, 65536, 0, -458753, 65536, 1, -589824, 0, 0, -524288, 0, 1, -655361, 65536, 0, -589825, 65536, 1, -720896, 0, 0, -655360, 0, 1, -720897, 65536, 1, -851968, 65536, 1, -786432, 0, 1, -917505, 65536, 0, -851969, 0, 0, -983040, 65536, 0, -917504, 65536, 0, -786433, 0, 1)
 
 [node name="DoorCorridor2_1" type="Sprite2D" parent="centerWall2"]
-position = Vector2(2102, 162)
+position = Vector2(2200, 62)
 scale = Vector2(6.46, 5.71375)
 texture = ExtResource("15_e1cub")
 

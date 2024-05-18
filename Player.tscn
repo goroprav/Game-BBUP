@@ -237,7 +237,7 @@ script = SubResource("GDScript_42apd")
 position = Vector2(182, -150)
 scale = Vector2(4.23022, 4.16615)
 sprite_frames = SubResource("SpriteFrames_wjq7m")
-animation = &"walk"
+animation = &"idle"
 autoplay = "idle"
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -251,7 +251,7 @@ drag_horizontal_enabled = true
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 position = Vector2(59, 18)
 scale = Vector2(1.49057, 1)
-polygon = PackedVector2Array(13.4177, -18, 6, 10, 55.0127, 14, 124.785, 11, 117.405, -18)
+polygon = PackedVector2Array(6.70884, -17, -7.37973, 10, 65.7467, 11, 136.86, 11, 129.481, -18)
 
 [node name="WalkSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_repqq")
