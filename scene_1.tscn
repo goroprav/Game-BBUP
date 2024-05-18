@@ -1,16 +1,17 @@
-[gd_scene load_steps=27 format=3 uid="uid://bta1cvrjn6orj"]
+[gd_scene load_steps=29 format=3 uid="uid://bta1cvrjn6orj"]
 
 [ext_resource type="PackedScene" uid="uid://dycvt8b3tmuqb" path="res://Teleport1.tscn" id="2_4qyeo"]
-[ext_resource type="PackedScene" uid="uid://c804j7ocmov0q" path="res://Person 1.tscn" id="2_dk75y"]
 [ext_resource type="Texture2D" uid="uid://cipp35hq3n5k0" path="res://Sprite/Textures/wall textyre 2.png" id="3_74job"]
 [ext_resource type="Texture2D" uid="uid://bwysdh1h6n3oa" path="res://Sprite/Textures/Plitka1 white.png" id="3_n6hpd"]
 [ext_resource type="Texture2D" uid="uid://coe1adlr8jo1x" path="res://Sprite/Textures/gender.png" id="3_t5cd8"]
 [ext_resource type="PackedScene" uid="uid://ddqn0rr2b75sx" path="res://Elements/Door_corridor.tscn" id="4_0m23r"]
+[ext_resource type="Script" path="res://Teleport2.gd" id="4_c8tba"]
 [ext_resource type="Texture2D" uid="uid://4r6i18x0wcie" path="res://Sprite/Textures/floor kitchen_2.png" id="4_fgidf"]
 [ext_resource type="Texture2D" uid="uid://df72jodwxi354" path="res://Sprite/Furniture/rack.png" id="5_ai4d1"]
 [ext_resource type="Texture2D" uid="uid://davvdb4ixt1mn" path="res://Sprite/Furniture/nightstand.png" id="7_wnjsg"]
 [ext_resource type="Texture2D" uid="uid://d3vogy08mnh8l" path="res://Sprite/Furniture/Door corridor 2.png" id="8_nl33h"]
 [ext_resource type="Texture2D" uid="uid://cg2yx4li4ygem" path="res://Sprite/Furniture/Door for kitchen.png" id="9_q7l0j"]
+[ext_resource type="PackedScene" uid="uid://darivxv8ugd1q" path="res://Player.tscn" id="12_4eue5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6yy5g"]
 texture = ExtResource("3_n6hpd")
@@ -33,6 +34,9 @@ sources/2 = SubResource("TileSetAtlasSource_7smr3")
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_fk57i"]
 a = Vector2(2363, 883)
 b = Vector2(611, 906)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mnodg"]
+size = Vector2(51.7892, 278.604)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_23k2u"]
 texture = ExtResource("4_fgidf")
@@ -99,9 +103,18 @@ layer_0/tile_data = PackedInt32Array(2359324, 0, 0, 2424860, 0, 1, 2359325, 6553
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
 shape = SubResource("SegmentShape2D_fk57i")
 
-[node name="Teleport" parent="." instance=ExtResource("2_4qyeo")]
+[node name="TeleportToFirstRoom" parent="." instance=ExtResource("2_4qyeo")]
 position = Vector2(397, 376)
-rotation = -1.5708
+rotation = -1.6101
+collision_layer = 8
+collision_mask = 2
+script = ExtResource("4_c8tba")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="TeleportToFirstRoom"]
+position = Vector2(-330.765, 69.5573)
+rotation = 0.843564
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_mnodg")
 
 [node name="rightWall" type="StaticBody2D" parent="."]
 position = Vector2(1820.97, -11.0302)
@@ -203,9 +216,6 @@ position = Vector2(275, -263)
 scale = Vector2(4.91, 4.58047)
 texture = ExtResource("9_q7l0j")
 
-[node name="Test" parent="." instance=ExtResource("2_dk75y")]
-position = Vector2(406, 181)
-
 [node name="centerWall2" type="StaticBody2D" parent="."]
 position = Vector2(-375, 172)
 
@@ -226,3 +236,9 @@ texture = ExtResource("8_nl33h")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="centerWall2"]
 shape = SubResource("SegmentShape2D_b3vot")
+
+[node name="Player" parent="." instance=ExtResource("12_4eue5")]
+position = Vector2(506, 673)
+
+[connection signal="body_entered" from="TeleportToFirstRoom" to="TeleportToFirstRoom" method="_on_body_entered"]
+[connection signal="body_entered" from="TeleportToFirstRoom" to="Player" method="_on_teleport_to_first_room_body_entered"]

@@ -6,3 +6,6 @@ res://Mobs/skeleton.tscn
 res://Teleport1.tscn
 res://Kitchen.tscn
 res://Person 1.tscn
+res://Teleport2.gd
+res://Teleport1.gd
+res://Teleport.gd
