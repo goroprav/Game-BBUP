@@ -148,7 +148,6 @@ collision_mask = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Teleport"]
 position = Vector2(45, -58)
 rotation = -0.834353
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_jdd6t")
 one_way_collision_margin = 27.5
 

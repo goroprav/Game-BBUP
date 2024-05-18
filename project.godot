@@ -14,6 +14,10 @@ config/name="Основа основ"
 run/main_scene="res://menu.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
+run/stretch/scale=1.7
+run/stretch/mode="disabled"
+run/stretch/aspect="keep"
+run/size/mode=3
 
 [display]
 
